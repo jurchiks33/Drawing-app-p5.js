@@ -70,6 +70,10 @@ function ShapeTools() {
         endShape(CLOSE);
     }
 
+    this.drawTriangle = function(x1, y1, x2, y2) {
+        triangle(x1, y1, x1, y2, x2, y2);
+    }
+
     
 
 }
