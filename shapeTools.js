@@ -19,4 +19,32 @@ function ShapeTools() {
         this.startX = mouseX;
         this.startY = mouseY;
     }
+
+    this.mouseReleased = function() {
+        this.startX = null;
+        this.startY = null;
+    }
+
+    this.draw = function() {
+        if(mouseIsPressed) {
+            if (this.startX && this.startY) {
+                switch (this.selectedShape) {
+                    case 'rectangle':
+                        rect(this.startX, this.startY, mouseX - this.startX,
+                            mouseY - this.startY);
+                        break;
+                    case 'ellipse':
+                        ellipse(this.startX, this.startY, mouseX - this.startX,
+                                mouseY - this.startY);
+                        break;
+                    case 'star':
+                        this.drawStar(this.startX, this.startY, 
+                            (mouseX - this.startX) * 0.5, 
+                            (mouseY - this.startY) * 0.5);
+                        break;
+                }
+            }
+        }
+    }
+
 }
