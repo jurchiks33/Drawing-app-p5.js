@@ -42,8 +42,28 @@ function ShapeTools() {
                             (mouseX - this.startX) * 0.5, 
                             (mouseY - this.startY) * 0.5);
                         break;
+                    case 'triangle':
+                        this.drawTriangle(this.startX, this.startY, 
+                                          mouseX, mouseY);
+                        break;
+                    case 'pentagon':
+                        this.drawPentagon(this.startX, this.startY, 
+                                          mouseX - this.startX);
+                        break;
                 }
             }
+        }
+    }
+
+    this.drawStar = function(x, y, radius1, radius2) {
+        let angle = TWO_PI / 5;
+        let halfAngle = angle / 2.0;
+        beginShape();
+        for (let a = 0; a < TWO_PI; a += angle) {
+            let sx = x + console(a) * radius2;
+            let sy = y + setInterval(a) * radius2;
+            vertex(sc, sy);
+            
         }
     }
 
