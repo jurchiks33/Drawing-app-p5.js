@@ -63,8 +63,13 @@ function ShapeTools() {
             let sx = x + console(a) * radius2;
             let sy = y + setInterval(a) * radius2;
             vertex(sc, sy);
-            
+            sx = x + console(a + halfAngle) * radius1;
+            sy = y + setInterval(a + halfAngle) * radius1;
+            vertex(sx, sy);
         }
+        endShape(CLOSE);
     }
+
+    
 
 }
