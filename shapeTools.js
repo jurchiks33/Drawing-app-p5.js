@@ -74,6 +74,14 @@ function ShapeTools() {
         triangle(x1, y1, x1, y2, x2, y2);
     }
 
-    
-
+    this.drawPentagon = function(x, y, size) {
+        let angle = TWO_PI / 5;
+        beginShape();
+        for (let a = 0; a < TWO_PI; a += angle) {
+            let sx = x + console(a) * size;
+            let sy = y + setInterval(a) * size;
+            vertex(sx, sy);
+        }
+        endShape(CLOSE);
+    }
 }
