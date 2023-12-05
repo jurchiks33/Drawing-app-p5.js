@@ -48,3 +48,15 @@ function draw() {
 		alert("it doesn't look like your tool has a draw method!");
 	}
 }
+
+function mousePressed() {
+    if (toolbox.selectedTool instanceof ShapeTools) {
+        toolbox.selectedTool.mousePressed();
+    }
+}
+
+function mouseReleased() {
+    if (toolbox.selectedTool instanceof ShapeTools) {
+        toolbox.selectedTool.mouseReleased();
+    }
+}

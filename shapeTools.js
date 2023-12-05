@@ -62,7 +62,7 @@ function ShapeTools() {
         for (let a = 0; a < TWO_PI; a += angle) {
             let sx = x + cos(a) * radius2;
             let sy = y + sin(a) * radius2;
-            vertex(sc, sy);
+            vertex(sx, sy);
             sx = x + cos(a + halfAngle) * radius1;
             sy = y + sin(a + halfAngle) * radius1;
             vertex(sx, sy);
@@ -78,8 +78,8 @@ function ShapeTools() {
         let angle = TWO_PI / 5;
         beginShape();
         for (let a = 0; a < TWO_PI; a += angle) {
-            let sx = x + console(a) * size;
-            let sy = y + setInterval(a) * size;
+            let sx = x + cos(a) * size;
+            let sy = y + sin(a) * size;
             vertex(sx, sy);
         }
         endShape(CLOSE);
