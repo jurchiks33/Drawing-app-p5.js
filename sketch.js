@@ -4,6 +4,8 @@ var toolbox = null;
 var colourP = null;
 var helpers = null;
 
+var shapeTool = null;
+
 
 
 function setup() {
@@ -25,9 +27,14 @@ function setup() {
 	toolbox.addTool(new LineToTool());
 	toolbox.addTool(new SprayCanTool);
 	toolbox.addTool(new mirrorDrawTool());
-	toolbox.addTool(new ShapeTools());
+	var shapeTool = new ShapeTools();
+	toolbox.addTool(shapeTool);
 	background(255);
 
+	select('#shapeSelector').changed(function() {
+        var selectedShape = select('#shapeSelector').value();
+        shapeTool.changeSelectedShape(selectedShape); 
+    });
 }
 
 function draw() {
