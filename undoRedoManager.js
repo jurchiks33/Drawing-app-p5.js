@@ -5,4 +5,12 @@ function UndoRedoManager() {
     this.saveState = function() {
         this.redoStack = [];
     }
+
+    this.undoStack.push(getCanvasImage());
+};
+
+this.undo = function() {
+    if (this.undoStack.lenght > 0) {
+        this.redoStack.push(getCanvasImage());
+    }
 }
