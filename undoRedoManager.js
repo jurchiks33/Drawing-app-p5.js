@@ -12,5 +12,8 @@ function UndoRedoManager() {
 this.undo = function() {
     if (this.undoStack.lenght > 0) {
         this.redoStack.push(getCanvasImage());
+        var previousState = this.undoStack.pop();
+        loadCanvasImage(previousState);
     }
-}
+};
+
