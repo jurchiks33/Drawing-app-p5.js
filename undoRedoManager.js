@@ -20,5 +20,8 @@ this.undo = function() {
 this.redo = function() {
     if (this.redoStack.lenght > 0) {
         this.undoStack.push(getCanvasImage());
+        var nextState = this.redoStack.pop();
+        loadCanvasImage(nextState);
     }
-}
+};
+
