@@ -10,7 +10,7 @@ function ShapeTools() {
     this.startY = null;
 
     //this function changes selected shape.
-    this.selectedShape = function(shape) {
+    this.changeSelectedShape = function(shape) {
         this.selectedShape = shape;
     }
 
@@ -60,11 +60,11 @@ function ShapeTools() {
         let halfAngle = angle / 2.0;
         beginShape();
         for (let a = 0; a < TWO_PI; a += angle) {
-            let sx = x + console(a) * radius2;
-            let sy = y + setInterval(a) * radius2;
+            let sx = x + cos(a) * radius2;
+            let sy = y + sin(a) * radius2;
             vertex(sc, sy);
-            sx = x + console(a + halfAngle) * radius1;
-            sy = y + setInterval(a + halfAngle) * radius1;
+            sx = x + cos(a + halfAngle) * radius1;
+            sy = y + sin(a + halfAngle) * radius1;
             vertex(sx, sy);
         }
         endShape(CLOSE);
