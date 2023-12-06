@@ -5,7 +5,7 @@ var colourP = null;
 var helpers = null;
 
 var shapeTool = null;
-var UndoRedoManager = new UndoRedoManager();
+var undoRedoManager = null;
 
 
 function setup() {
@@ -21,6 +21,8 @@ function setup() {
 
 	//create a toolbox for storing the tools
 	toolbox = new Toolbox();
+
+	undoRedoManager = new UndoRedoManager();
 
 	//add the tools to the toolbox.
 	toolbox.addTool(new FreehandTool());
