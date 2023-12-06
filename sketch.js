@@ -39,10 +39,12 @@ function setup() {
     });
 
 	select('#undoButton').mouseClicked(function() {
+		console.log("Undo button clicked");
         undoRedoManager.undo();
     });
 
 	select('#redoButton').mouseClicked(function() {
+		console.log("Redo button clicked");
         undoRedoManager.redo();
     });
 
