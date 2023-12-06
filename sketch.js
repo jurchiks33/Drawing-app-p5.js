@@ -42,6 +42,10 @@ function setup() {
         undoRedoManager.undo();
     });
 
+	select('#redoButton').mouseClicked(function() {
+        undoRedoManager.redo();
+    });
+
 	undoRedoManager.saveState();
 }
 
