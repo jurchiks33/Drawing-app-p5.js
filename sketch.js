@@ -67,5 +67,7 @@ function mouseReleased() {
 function keyPressed() {
 	if (keyCode === 90 && keyIsDown(CONTROL)) { // Ctrl + z Undo
 		UndoRedoManager.undo();
+	} else if (keyCode === 89 && keyIsDown(CONTROL)) {   // CTRL + Y Redo
+		UndoRedoManager.redo();
 	}
 }
