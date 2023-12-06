@@ -38,6 +38,10 @@ function setup() {
         shapeTool.changeSelectedShape(selectedShape); 
     });
 
+	select('#undoButton').mouseClicked(function() {
+        undoRedoManager.undo();
+    });
+
 	undoRedoManager.saveState();
 }
 
