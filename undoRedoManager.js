@@ -4,13 +4,11 @@ function UndoRedoManager() {
 
     this.saveState = function() {
         this.redoStack = [];
-    
-
-    this.undoStack.push(getCanvasImage());
-};
+        this.undoStack.push(getCanvasImage());
+    };
 
     this.undo = function() {
-        if (this.undoStack.lenght > 0) {
+        if (this.undoStack.length > 0) {
             this.redoStack.push(getCanvasImage());
             var previousState = this.undoStack.pop();
             loadCanvasImage(previousState);
@@ -18,7 +16,7 @@ function UndoRedoManager() {
     };
 
     this.redo = function() {
-        if (this.redoStack.lenght > 0) {
+        if (this.redoStack.length > 0) {
             this.undoStack.push(getCanvasImage());
             var nextState = this.redoStack.pop();
             loadCanvasImage(nextState);
@@ -26,11 +24,11 @@ function UndoRedoManager() {
     };
 
     function getCanvasImage() {
-        return getCanvasImage(0, 0, width, height);
+        return get(0, 0, width, height);
     }
 
     function loadCanvasImage(img) {
         clear();
-        Image(img, 0, 0);
+        image(img, 0, 0);
     }
 }
