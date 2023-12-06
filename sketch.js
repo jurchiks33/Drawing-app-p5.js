@@ -61,4 +61,11 @@ function mouseReleased() {
     if (toolbox.selectedTool instanceof ShapeTools) {
         toolbox.selectedTool.mouseReleased();
     }
+	UndoRedoManager.saveState();
+}
+
+function keyPressed() {
+	if (keyCode === 90 && keyIsDown(CONTROL)) { // Ctrl + z Undo
+		UndoRedoManager.undo();
+	}
 }
