@@ -38,7 +38,7 @@ function setup() {
         shapeTool.changeSelectedShape(selectedShape); 
     });
 
-	UndoRedoManager.saveState();
+	undoRedoManager.saveState();
 }
 
 function draw() {
@@ -63,13 +63,13 @@ function mouseReleased() {
     if (toolbox.selectedTool instanceof ShapeTools) {
         toolbox.selectedTool.mouseReleased();
     }
-	UndoRedoManager.saveState();
+	undoRedoManager.saveState();
 }
 
 function keyPressed() {
 	if (keyCode === 90 && keyIsDown(CONTROL)) { // Ctrl + z Undo
-		UndoRedoManager.undo();
+		undoRedoManager.undo();
 	} else if (keyCode === 89 && keyIsDown(CONTROL)) {   // CTRL + Y Redo
-		UndoRedoManager.redo();
+		undoRedoManager.redo();
 	}
 }
