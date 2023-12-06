@@ -5,7 +5,7 @@ var colourP = null;
 var helpers = null;
 
 var shapeTool = null;
-
+var UndoRedoManager = new UndoRedoManager();
 
 
 function setup() {
@@ -35,6 +35,8 @@ function setup() {
         var selectedShape = select('#shapeSelector').value();
         shapeTool.changeSelectedShape(selectedShape); 
     });
+
+	UndoRedoManager.saveState();
 }
 
 function draw() {
