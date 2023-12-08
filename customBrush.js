@@ -9,4 +9,9 @@ function CustomBrush() {
             line(pmouseX, pmouseY, mouseX, mouseY);
         }
     };
+
+    this.populateOptions = function() {
+        
+    }
+
 }
