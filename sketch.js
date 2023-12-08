@@ -29,9 +29,13 @@ function setup() {
 	toolbox.addTool(new LineToTool());
 	toolbox.addTool(new SprayCanTool);
 	toolbox.addTool(new mirrorDrawTool());
+
 	var shapeTool = new ShapeTools();
 	toolbox.addTool(shapeTool);
 	background(255);
+
+	var customBrush = new CustomBrush();
+	toolbox.addTool(customBrush);
 
 	select('#shapeSelector').changed(function() {
         var selectedShape = select('#shapeSelector').value();
