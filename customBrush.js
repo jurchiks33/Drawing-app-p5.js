@@ -13,6 +13,7 @@ function CustomBrush() {
     this.populateOptions = function() {
         select('.options').html('<label for="brush-size-slider">Brush Size:</label><input type="range" id="brush-size-slider" min="1" max="10" value="' + this.brushSize + '">');
         select('#brush-size-slider').input(() => {
+            this.brushSize = select('#brush-size-slider').value();
     }
 
 }
