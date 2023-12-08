@@ -4,16 +4,17 @@ function CustomBrush() {
 
     this.draw = function() {
         if (mouseIsPressed) {
-            stroke(0);
-            strokeWeight(1);
+            stroke(0); 
+            strokeWeight(this.brushSize); 
             line(pmouseX, pmouseY, mouseX, mouseY);
         }
     };
 
     this.populateOptions = function() {
-        select('.options').html('<label for="brush-size-slider">Brush Size:</label><input type="range" id="brush-size-slider" min="1" max="10" value="' + this.brushSize + '">');
-        select('#brush-size-slider').input(() => {
-            this.brushSize = select('#brush-size-slider').value();
+        var brushSlider = createSlider(1, 10, this.brushSize);
+        brushSlider.parent(select('.options'));
+        brushSlider.input(() => {
+            this.brushSize = brushSlider.value();
         });
     };
 }
