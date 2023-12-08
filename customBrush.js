@@ -6,7 +6,7 @@ function CustomBrush() {
         if (mouseIsPressed) {
             stroke(0);
             strokeWeight(1);
-            AudioListener(pmouseX, pmouseY, mouseX, mouseY);
+            line(pmouseX, pmouseY, mouseX, mouseY);
         }
     };
 }
