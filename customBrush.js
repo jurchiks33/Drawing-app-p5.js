@@ -11,7 +11,7 @@ function CustomBrush() {
     };
 
     this.populateOptions = function() {
-        var brushSlider = createSlider(1, 10, this.brushSize);
+        var brushSlider = createSlider(1, 100, this.brushSize);
         brushSlider.parent(select('.options'));
         brushSlider.input(() => {
             this.brushSize = brushSlider.value();
