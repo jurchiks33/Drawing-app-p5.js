@@ -11,10 +11,6 @@ function CustomBrush() {
     };
 
     this.populateOptions = function() {
-        var brushSlider = createSlider(1, 100, this.brushSize);
-        brushSlider.parent(select('.options'));
-        brushSlider.input(() => {
-            this.brushSize = brushSlider.value();
-        });
-    };
+        // First, clear the previous options
+        select('.options').html('');
 }
