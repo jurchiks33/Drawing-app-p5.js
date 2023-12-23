@@ -18,6 +18,7 @@ function LineToTool(){
 
 			else{
 				updatePixels();
+				strokeWeight(brushSize);
 				line(startMouseX, startMouseY, mouseX, mouseY);
 			}
 
