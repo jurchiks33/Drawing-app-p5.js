@@ -19,6 +19,7 @@ function setup() {
 
     // Create the size slider
     var brushSlider = createSlider(1, 100, brushSize);
+    brushSlider.class('brush-size-slider'); // Add a unique class
     brushSlider.parent(select('.options'));
     brushSlider.input(() => {
         brushSize = brushSlider.value();

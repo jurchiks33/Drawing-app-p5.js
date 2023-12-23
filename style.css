@@ -75,3 +75,7 @@ html, body {
 .header {
   background-color: #999;
 }
+
+.brush-size-slider {
+    margin-top: 2cm; /* Adjusting margin under horizonatl/vertical button */
+}
