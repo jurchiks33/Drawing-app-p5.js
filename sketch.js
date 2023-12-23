@@ -98,3 +98,13 @@ function keyPressed() {
 		undoRedoManager.redo();
 	}
 }
+
+function initializeGlobalOptions() {
+    // Create the size slider or any other global options
+    var brushSlider = createSlider(1, 100, brushSize);
+    brushSlider.class('brush-size-slider');
+    brushSlider.parent(select('.options'));
+    brushSlider.input(() => {
+        brushSize = brushSlider.value();
+    });
+}
