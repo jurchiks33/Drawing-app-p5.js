@@ -1,58 +1,68 @@
-//global variables that will store the toolbox colour palette
-//amnd the helper functions
+// Global variable for brush size
+var brushSize;
+
+// Global variables for the toolbox, colour palette, helpers, etc.
 var toolbox = null;
 var colourP = null;
 var helpers = null;
-
 var shapeTool = null;
 var undoRedoManager = null;
 
-
 function setup() {
+    // Create a canvas to fill the content div from index.html
+    canvasContainer = select('#content');
+    var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
+    c.parent("content");
 
-	//create a canvas to fill the content div from index.html
-	canvasContainer = select('#content');
-	var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
-	c.parent("content");
+    // Initialize the brush size
+    brushSize = 10; // Set a default size
 
-	//create helper functions and the colour palette
-	helpers = new HelperFunctions();
-	colourP = new ColourPalette();
+    // Create the size slider
+    var brushSlider = createSlider(1, 100, brushSize);
+    brushSlider.parent(select('.options'));
+    brushSlider.input(() => {
+        brushSize = brushSlider.value();
+    });
 
-	//create a toolbox for storing the tools
-	toolbox = new Toolbox();
+    // Create helper functions and the colour palette
+    helpers = new HelperFunctions();
+    colourP = new ColourPalette();
 
-	undoRedoManager = new UndoRedoManager();
+    // Create a toolbox for storing the tools
+    toolbox = new Toolbox();
 
-	//add the tools to the toolbox.
-	toolbox.addTool(new FreehandTool());
-	toolbox.addTool(new LineToTool());
-	toolbox.addTool(new SprayCanTool);
-	toolbox.addTool(new mirrorDrawTool());
+    undoRedoManager = new UndoRedoManager();
 
-	var shapeTool = new ShapeTools();
-	toolbox.addTool(shapeTool);
-	background(255);
+    // Add the tools to the toolbox
+    toolbox.addTool(new FreehandTool());
+    toolbox.addTool(new LineToTool());
+    toolbox.addTool(new SprayCanTool());
+    toolbox.addTool(new mirrorDrawTool());
 
-	var customBrush = new CustomBrush();
-	toolbox.addTool(customBrush);
+    shapeTool = new ShapeTools();
+    toolbox.addTool(shapeTool);
+    background(255);
 
-	select('#shapeSelector').changed(function() {
+    var customBrush = new CustomBrush();
+    toolbox.addTool(customBrush);
+
+    // Event listeners for UI elements
+    select('#shapeSelector').changed(function() {
         var selectedShape = select('#shapeSelector').value();
         shapeTool.changeSelectedShape(selectedShape); 
     });
 
-	select('#undoButton').mouseClicked(function() {
-		console.log("Undo button clicked");
+    select('#undoButton').mouseClicked(function() {
+        console.log("Undo button clicked");
         undoRedoManager.undo();
     });
 
-	select('#redoButton').mouseClicked(function() {
-		console.log("Redo button clicked");
+    select('#redoButton').mouseClicked(function() {
+        console.log("Redo button clicked");
         undoRedoManager.redo();
     });
 
-	undoRedoManager.saveState();
+    undoRedoManager.saveState();
 }
 
 function draw() {
