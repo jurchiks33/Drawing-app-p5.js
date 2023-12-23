@@ -13,4 +13,11 @@ function CustomBrush() {
     this.populateOptions = function() {
         // First, clear the previous options
         select('.options').html('');
+        // Then create the slider
+        var brushSlider = createSlider(1, 100, this.brushSize);
+        brushSlider.parent(select('.options'));
+        brushSlider.input(() => {
+            this.brushSize = brushSlider.value();
+    });
+};
 }
