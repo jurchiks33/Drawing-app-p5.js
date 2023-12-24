@@ -62,6 +62,7 @@ function ShapeTools() {
                         this.drawTriangle(this.startX, this.startY, 
                                           mouseX, mouseY);
                         break;
+                        //for pentagon drawing from starting point to current mouse position
                     case 'pentagon':
                         this.drawPentagon(this.startX, this.startY, 
                                           mouseX - this.startX);
@@ -71,6 +72,7 @@ function ShapeTools() {
         }
     }
 
+    //function that draws star.
     this.drawStar = function(x, y, radius1, radius2) {
         let angle = TWO_PI / 5;
         let halfAngle = angle / 2.0;
@@ -86,10 +88,12 @@ function ShapeTools() {
         endShape(CLOSE);
     }
 
+    //function that draws triangle.
     this.drawTriangle = function(x1, y1, x2, y2) {
         triangle(x1, y1, x1, y2, x2, y2);
     }
 
+    //function that draws pentagon.
     this.drawPentagon = function(x, y, size) {
         let angle = TWO_PI / 5;
         beginShape();
