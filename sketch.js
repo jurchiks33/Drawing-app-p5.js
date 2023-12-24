@@ -57,7 +57,7 @@ function setup() {
         console.log("Undo button clicked");
         undoRedoManager.undo();
     });
-
+    
     select('#redoButton').mouseClicked(function() {
         console.log("Redo button clicked");
         undoRedoManager.redo();
@@ -88,7 +88,7 @@ function mouseReleased() {
     if (toolbox.selectedTool instanceof ShapeTools) {
         toolbox.selectedTool.mouseReleased();
     }
-	undoRedoManager.saveState();
+    undoRedoManager.saveState(); 
 }
 
 function keyPressed() {
