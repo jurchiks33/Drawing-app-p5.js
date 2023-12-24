@@ -42,18 +42,22 @@ function ShapeTools() {
 
                 switch (this.selectedShape) {
                     case 'rectangle':
+                        //for rectangle drawing from starting point to current mouse position
                         rect(this.startX, this.startY, mouseX - this.startX,
                              mouseY - this.startY);
                         break;
+                        //for ellipse drawing from starting point to current mouse position
                     case 'ellipse':
                         ellipse(this.startX, this.startY, mouseX - this.startX,
                                 mouseY - this.startY);
                         break;
+                        //for star drawing from starting point to current mouse position
                     case 'star':
                         this.drawStar(this.startX, this.startY, 
                                       (mouseX - this.startX) * 0.5, 
                                       (mouseY - this.startY) * 0.5);
                         break;
+                        //for triangle drawing from starting point to current mouse position
                     case 'triangle':
                         this.drawTriangle(this.startX, this.startY, 
                                           mouseX, mouseY);
