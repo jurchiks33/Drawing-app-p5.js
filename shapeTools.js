@@ -1,11 +1,12 @@
 function ShapeTools() {
+    //Basic properties of the shape tool object.
     this.name = "ShapeTools";
     this.icon = "assets/shapeToolIcon.jpg";
 
-    // Default shape
+    // Default shape selected is rectangle.
     this.selectedShape = 'rectangle';
 
-    // Starting and ending points of shape
+    // Starting points when shape is being drawn.
     this.startX = null;
     this.startY = null;
 
@@ -19,6 +20,7 @@ function ShapeTools() {
 
     // Mouse pressed and released events
     this.mousePressed = function() {
+        //set starting x and y to current mouse position.
         this.startX = mouseX;
         this.startY = mouseY;
         canvasState = get(); // Capture the canvas state when the mouse is pressed
