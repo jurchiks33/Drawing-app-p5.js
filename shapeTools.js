@@ -26,6 +26,7 @@ function ShapeTools() {
         canvasState = get(); // Capture the canvas state when the mouse is pressed
     }
 
+    //function that handles mouse released event.
     this.mouseReleased = function() {
         this.startX = null;
         this.startY = null;
@@ -34,8 +35,8 @@ function ShapeTools() {
 
     // Draw function
     this.draw = function() {
-        if(mouseIsPressed) {
-            if (this.startX && this.startY) {
+        if(mouseIsPressed) {    //Check if mouse is pressed.
+            if (this.startX && this.startY) {  //check for starting coordinates.
                 // Restore the canvas state for each frame
                 image(canvasState, 0, 0);
 
