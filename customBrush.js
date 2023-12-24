@@ -4,7 +4,7 @@ function CustomBrush() {
 
     this.draw = function() {
         if (mouseIsPressed) {
-            stroke(0);
+            stroke(colourP.selectedColour);
             strokeWeight(brushSize); 
             line(pmouseX, pmouseY, mouseX, mouseY);
         }
