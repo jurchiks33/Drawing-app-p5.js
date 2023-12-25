@@ -4,18 +4,21 @@
 //Tryed to console.log but didnt see something outstanding on a problem.
 
 function UndoRedoManager() {
+    //stacks to hold undo/redo states.
     this.undoStack = [];
     this.redoStack = [];
 
+    //Save current state of canvas/
     this.saveState = function() {
-        this.redoStack = [];
-        this.undoStack.push(getCanvasImage());
+        this.redoStack = [];        //clears redo stake when new one is saved.
+        this.undoStack.push(getCanvasImage()); //Pushes current canvas image into undo stack.
     };
 
+    //handles undo action.
     this.undo = function() {
         console.log("Undo called. Stack size before undo:", this.undoStack.length);
         if (this.undoStack.length > 0) {
-            this.redoStack.push(getCanvasImage());
+            this.redoStack.push(getCanvasImage()); //saves current state before undoing redo stack.
             var previousState = this.undoStack.pop();
             loadCanvasImage(previousState);
         } else {
