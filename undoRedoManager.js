@@ -47,9 +47,10 @@ function UndoRedoManager() {
         return get(0, 0, width, height);    //Returns image object to current canvas object
     }
     
+    //loads image into a canvas
     function loadCanvasImage(img) {
         console.log("Restoring canvas state");
-        clear();
-        image(img, 0, 0);
+        clear();    //Clears canvas.
+        image(img, 0, 0);   //draws image in to the canvas.
     }
 }
