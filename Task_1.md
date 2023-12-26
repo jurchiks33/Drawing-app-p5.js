@@ -25,3 +25,9 @@ Extensions choosen:
 
     Complexity and Challenges: Most challenging and complex was implementing accurate geometric solutions for shapes, especially for star and pentagon.
                                One of the biggest and complex challenge was ensuring that shapes scale properly as user drags the mouse, which requires management of coordinates.
+
+2. Custom Brush:
+    Description: Custom brush tool simulate a paintbrush by creating multiple strokes with different opacity and thickness around tthe main line.
+
+    Complex Techniques:  Was used advanced 'for' loop to create multiple brush strokes. (atleast for me it seemed advanced)
+                         Also was used randomization to vary stroke properties like position, opacity, thickness.
