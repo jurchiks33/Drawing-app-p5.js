@@ -9,3 +9,13 @@ Your answer should include:
     constructor functions, nested looping); 
     the complexity of the extension; 
     and any expected challenges you will have implementing it.
+
+
+Drawing application extensions choosen to build are listed below. They are choosen due to popularity among the users in a simillar applications
+and due to challenges they can represent to the coding which will give good coding practice.
+
+Extensions choosen:
+
+1. Shape Tool:
+    Description: This extension allows user to draw various shapes. As a starting combo of shapes was choosen resctangle, ellipse, star, triangle and pentagon.
+                 Users can select a shape from dropdown menu in the top menu of the application and draw shape into a canvas by clicking mouse and moving it.
