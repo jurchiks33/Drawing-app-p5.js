@@ -45,3 +45,12 @@ Coding Progress.
     3. Undo/Redo Manager:
             Completion: Basic functionality using Control+Z/Y is working.
             Challenges: Buttons for undo/redo are not yet functional. Debugging is ongoing to resolve issue.
+
+Next Steps.
+    1. Finilize Undo/Redo buttons: Next important step is debug and make Undo/Redo buttons functional. It will include
+                                   review of event handling to ensure proper linking between buttons and undo/redo manager.
+    
+    2.Additional Features: Depending on a time available might be implemented different app themes(christmas, city, classic, modern),
+                           also more shape selection, random image generation and updated styling with CSS.
+    
+    3.Testing: After all features are in place, focus will shift to better performance and user experience, also code refactoring making it nice and clean.
