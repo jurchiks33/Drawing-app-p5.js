@@ -30,3 +30,18 @@ Design Work and Research.
             Research on Algorithms: For complex tools like custom brush, shape tool and undo/redo buttons were conducted
                                     research on algorithms behind the tools to get desired effect.
 
+Coding Progress.
+    1.Shape Tool:
+            Completion: Shape tool is fully functional, allowing users to draw different shapes. Arrays and loops were used for difficult shapes.
+
+            Challenges: Implementing accurate and scalable geometric shapes was challenging , especially for star and pentagon.
+    
+    2. Custom Brush:
+            Completion: Most of the custom brush is compleated, missing some minor thing like fixingh to stop drawing brush when mouse movement is stopped,
+                        for now it is keep drawing, making a spray can effect.
+            
+            Challenges: Achieving a natural brush effect required randomization parameter tuning.
+
+    3. Undo/Redo Manager:
+            Completion: Basic functionality using Control+Z/Y is working.
+            Challenges: Buttons for undo/redo are not yet functional. Debugging is ongoing to resolve issue.
