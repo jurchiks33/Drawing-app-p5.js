@@ -19,3 +19,9 @@ Extensions choosen:
 1. Shape Tool:
     Description: This extension allows user to draw various shapes. As a starting combo of shapes was choosen resctangle, ellipse, star, triangle and pentagon.
                  Users can select a shape from dropdown menu in the top menu of the application and draw shape into a canvas by clicking mouse and moving it.
+
+    Complex Techniques: In a shape tool i was using constructor function to define "ShapeTools" class.
+                        There were used arrays to manage different shapes and nested looping for more difficult shapes like star and pentagon.
+
+    Complexity and Challenges: Most challenging and complex was implementing accurate geometric solutions for shapes, especially for star and pentagon.
+                               One of the biggest and complex challenge was ensuring that shapes scale properly as user drags the mouse, which requires management of coordinates.
