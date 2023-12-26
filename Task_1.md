@@ -29,23 +29,21 @@ Extensions choosen:
 2. Custom Brush:
     Description: Custom brush tool simulate a paintbrush by creating multiple strokes with different opacity and thickness around tthe main line.
 
-    Complex Techniques:  Was used advanced 'for' loop to create multiple brush strokes. (atleast for me it seemed advanced)
+    Complex Techniques:  Advanced 'for' loop to create multiple brush strokes.
                          Also was used randomization to vary stroke properties like position, opacity, thickness.
     
     Complexity and Challenges: Main challenge was to achieve brush effect which involved tuning of the randomization parameters and making sure brush strokes
-                               blend well in canvas. At the very start of the tool it looked just like freehand tool.
+                               blend well in canvas.
 
 3. Undo/Redo Manager:
     Description: This tool allows users to undo and redo their actions in canvas and it is a critical feature in a drawing app allowing users to correct mistakes.
-                 Users can undo actions with control+z and redo with control+y (working). Also users get a buttons for undo/redo, which are still work in a progress
-                 and for some reson are not working, will try to fix it in coming weeks or find a creative way around it. (hints on this bug appreciated in a feedback ;)
+                 Users can undo actions with control+z and redo with control+y (working). Also users get a buttons for undo/redo, which are still work in a progress.
     
     Complex Techniques: For i given tool it was managing two stacks to handle undo/redo actions and saving/restoring canvas states.
 
     Complexity and Challenges: Main challenge was to capture and restore canvas state, ensuring that the stacks are updated correctly and that the applications
-                               performance remains smooth during these operations. Another challenge is to make buttons work but i have feeling it is just some 
-                               connecting issues between buttons and a code. I tryed console.log almost on every action but still clueless about cause of problem,
-                               will debug it soone, hopefully by time you red this it is fixed.
+                               performance remains smooth during these operations.
 
 Conclusion.
-    
+    Extending this drawing app involve creative and technical challenges. This project not only tests ability to use construction functions, arrays, objects and nested loops,
+    but also demands to take in account user experience and interface design. The main challenges will most likely arise at the end when fine tuning of interactivity will arise.
