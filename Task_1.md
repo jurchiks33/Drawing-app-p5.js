@@ -39,3 +39,13 @@ Extensions choosen:
     Description: This tool allows users to undo and redo their actions in canvas and it is a critical feature in a drawing app allowing users to correct mistakes.
                  Users can undo actions with control+z and redo with control+y (working). Also users get a buttons for undo/redo, which are still work in a progress
                  and for some reson are not working, will try to fix it in coming weeks or find a creative way around it. (hints on this bug appreciated in a feedback ;)
+    
+    Complex Techniques: For i given tool it was managing two stacks to handle undo/redo actions and saving/restoring canvas states.
+
+    Complexity and Challenges: Main challenge was to capture and restore canvas state, ensuring that the stacks are updated correctly and that the applications
+                               performance remains smooth during these operations. Another challenge is to make buttons work but i have feeling it is just some 
+                               connecting issues between buttons and a code. I tryed console.log almost on every action but still clueless about cause of problem,
+                               will debug it soone, hopefully by time you red this it is fixed.
+
+Conclusion.
+    
