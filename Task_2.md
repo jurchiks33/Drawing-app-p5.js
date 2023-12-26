@@ -54,3 +54,6 @@ Next Steps.
                            also more shape selection, random image generation and updated styling with CSS.
     
     3.Testing: After all features are in place, focus will shift to better performance and user experience, also code refactoring making it nice and clean.
+
+    4. User Feedback: Will try to gather user feedback on compleated app to improve apps usability. Also this step will involve conducting user test sessions, 
+                      to collect feedback about available tools and tools that can be added to the application and possible adjustements to the app after user feedback.
