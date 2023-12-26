@@ -31,3 +31,11 @@ Extensions choosen:
 
     Complex Techniques:  Was used advanced 'for' loop to create multiple brush strokes. (atleast for me it seemed advanced)
                          Also was used randomization to vary stroke properties like position, opacity, thickness.
+    
+    Complexity and Challenges: Main challenge was to achieve brush effect which involved tuning of the randomization parameters and making sure brush strokes
+                               blend well in canvas. At the very start of the tool it looked just like freehand tool.
+
+3. Undo/Redo Manager:
+    Description: This tool allows users to undo and redo their actions in canvas and it is a critical feature in a drawing app allowing users to correct mistakes.
+                 Users can undo actions with control+z and redo with control+y (working). Also users get a buttons for undo/redo, which are still work in a progress
+                 and for some reson are not working, will try to fix it in coming weeks or find a creative way around it. (hints on this bug appreciated in a feedback ;)
