@@ -11,3 +11,22 @@ You don’t have to include everything you have done up to this point
 but try and be selective and select the best examples of your process.
 
     How much of the code have you written so far. What do you intend to do next?
+
+For now considerable half part of drawing app is done. The focus of this part has been introducing new tools for users and 
+enhance user experience.
+
+Design Work and Research.
+    1. User interface design:
+            Brainstorming: sessions were focued to identify key features that users expect in a modern drawing app, which
+                           included popular drawing app reviewing for inspiration.
+            
+            Interface design: Attention was given to create an intuative user friendly interface. Sketches and wireframes were developed
+                              to visualize tools like shape tool, custom brush and undo/redo functions and also for upcoming tools.
+    
+    2. Code design and Research:
+            Code Diagrams: Diagrams were used to plan the structure of the code and how different code modules will interact
+                           with main drawing canvas.
+            
+            Research on Algorithms: For complex tools like custom brush, shape tool and undo/redo buttons were conducted
+                                    research on algorithms behind the tools to get desired effect.
+
