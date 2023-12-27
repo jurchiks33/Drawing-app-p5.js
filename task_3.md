@@ -26,4 +26,10 @@ Week 3. Will start on a theme selection. This one activity could be very difficu
 and will take week 4 and 5 to compleate theme selection.
 Week 6 and 7 will be used to make random image generation tool, whish will allow to generate
 random images in canvas and p5.js is perfect for that. Will implement nothing difficult and time consuming.
-Planning to go for a random walk which will have parameter of 
+Planning to go for a random walk generated from points(3000 points) and random colors.
+Week 8. will be used for user testing and feedback.
+Week 9. Gonna make final adjustements based on feedback from user testing.
+
+Given timeline allocate time according to difficulty of activity, starting from debugging 
+and progressinf towards more complex features like themes and random image generator. Final weeks will be used
+for user testing and final adjustements.
