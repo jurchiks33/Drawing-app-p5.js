@@ -16,4 +16,14 @@ and submission into activities for allocating time to on the chart.
 
     You should make reference to your chart to clarify the points you make here.
 
-    
+
+
+Gantt chart timeline is from 1 January to 1st March, which will give me approximate 9 weeks to finish drawing app.
+
+week 1 i will debugg and polish up undo/redo Buttons.
+Week 2 will be used to ad dmore shapes into a shape tool.
+Week 3. Will start on a theme selection. This one activity could be very difficult
+and will take week 4 and 5 to compleate theme selection.
+Week 6 and 7 will be used to make random image generation tool, whish will allow to generate
+random images in canvas and p5.js is perfect for that. Will implement nothing difficult and time consuming.
+Planning to go for a random walk which will have parameter of 
