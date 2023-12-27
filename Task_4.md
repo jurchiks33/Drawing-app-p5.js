@@ -43,7 +43,38 @@ External resources used in Drawing app are:
                             endShape(CLOSE);
                             }
     Stack Overflows:
-    
+                    For a custom brush direction of a code was taken from. It served as a 
+                    base example to see how to make tool and which way code should be organized.
+                                                            function setup() {
+                                    createCanvas(200, 200);
+                                    background("black");
+                                    stroke("white");
+                                    gradientLine(0, 0, 50, 50, 1, 3, 30);
+                                    noLoop();
+                                    }
+
+                                    function gradientLine(
+                                    start_x,
+                                    start_y,
+                                    end_x,
+                                    end_y,
+                                    start_weight,
+                                    end_weight,
+                                    segments
+                                    ) {
+                                    let prev_loc_x = start_x;
+                                    let prev_loc_y = start_y;
+                                    for (let i = 1; i <= segments; i++) {
+                                        let cur_loc_x = lerp(start_x, end_x, i / segments);
+                                        let cur_loc_y = lerp(start_y, end_y, i / segments);
+                                        push();
+                                        strokeWeight(lerp(start_weight, end_weight, i / segments));
+                                        line(prev_loc_x, prev_loc_y, cur_loc_x, cur_loc_y);
+                                        pop();
+                                        prev_loc_x = cur_loc_x;
+                                        prev_loc_y = cur_loc_y;
+                                    }
+                                    }
 
 
     CodePen.
