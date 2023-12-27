@@ -12,6 +12,9 @@ but try and be selective and select the best examples of your process.
 
     How much of the code have you written so far. What do you intend to do next?
 
+
+    
+
 For now considerable half part of drawing app is done. The focus of this part has been introducing new tools for users and 
 enhance user experience.
 
