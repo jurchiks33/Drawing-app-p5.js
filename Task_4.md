@@ -79,5 +79,5 @@ External resources used in Drawing app are:
     W3Schools. This one was used for HTML and CSS ideas, no code was copied from it, just basic idea of structure
                 and possible css ideas for applications styling. Will be used more and reffered to at the final part submission
 
-    CodiCode: for undo redo basis was used code example
+    CodiCode: for undo redo basis was used code example from codicode.com.
     
