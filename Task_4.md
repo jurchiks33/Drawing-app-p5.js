@@ -12,3 +12,10 @@ This should include:
 
 You do not need to include everything you have read or that has helped you. 
 Only where you have used or adapted code that appears in your project.
+
+External resources used in Drawing app are:
+    P.js Library.
+    Stack Overflows:
+    CodePen.
+    W3Schools.
+    
