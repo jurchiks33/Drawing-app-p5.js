@@ -43,3 +43,51 @@ function CustomBrush() {
     };
 }
 
+
+
+Shape Tools
+This tool was written with a help of p5.js library. First part of it was written by my self 
+for the basic properties of the tool and mouse press and release events were written by myself 
+(Page 2 below. Page 3 and page 4 were written with help of p5.js library code examples. See task 4.)
+
+function ShapeTools() {
+    //Basic properties of the shape tool object.
+    this.name = "ShapeTools";
+    this.icon = "assets/shapeToolIcon.jpg";
+
+    // Default shape selected is rectangle.
+    this.selectedShape = 'rectangle';
+
+    // Starting points when shape is being drawn.
+    this.startX = null;
+    this.startY = null;
+
+    // Variable to store the canvas state
+    var canvasState;
+
+    // This function changes selected shape.
+    this.changeSelectedShape = function(shape) {
+        this.selectedShape = shape;
+    }
+
+    // Mouse pressed and released events
+    this.mousePressed = function() {
+        //set starting x and y to current mouse position.
+        this.startX = mouseX;
+        this.startY = mouseY;
+// Capture the canvas state when the mouse is pressed
+        canvasState = get(); 
+    }
+
+    //function that handles mouse released event.
+    this.mouseReleased = function() {
+        this.startX = null;
+        this.startY = null;
+// Clear the saved state when the mouse is released
+        canvasState = null; 
+    }
+
+    // Draw function
+    this.draw = function() {
+//Check if mouse is pressed.
+        if(mouseIsPressed) {  
