@@ -7,3 +7,6 @@
     How have you adapted and evolved inspiration you have seen from other sources.
 
     Can you justify your ideas in terms of a use case or use group where existing solutions aren't available.
+
+
+My drawing application will stand out due to unique aspect of random image generation tool.(for final submission).
