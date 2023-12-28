@@ -13,4 +13,4 @@ My drawing application will stand out due to unique aspect of random image gener
 This feature will be uncomon for standart drawing applications and will use p5.js creativity potential.
 Complex coding techniques are evident in a customized brush tool, which is blending multiple strokes with various
 tickness and opacity, creating natural painting experience.
-Inspiration for existing aplication has been
+Inspiration for existing aplication has been adapted, ensuring that project addreses user need which not fully meet by current standart offerings.
