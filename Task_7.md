@@ -14,4 +14,4 @@ This feature will be uncomon for standart drawing applications and will use p5.j
 Complex coding techniques are evident in a customized brush tool, which is blending multiple strokes with various
 tickness and opacity, creating natural painting experience.
 Inspiration for existing aplication has been adapted, ensuring that project addreses user need which not fully meet by current standart offerings.
-USer friendly interface with sophisticated drawing tools will be usable by novice and experienced users.(I am assuming overall picture when app is finished)
+USer friendly interface with sophisticated drawing tools will be usable by novice and experienced users.(assuming overall picture when app is finished)
