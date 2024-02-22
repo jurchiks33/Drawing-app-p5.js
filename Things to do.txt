@@ -8,4 +8,7 @@ also upload progress log for a weekly work
 Upload Final code as a zip file.
 60% of marking will come from: Stability and usability, Complexity and level of challenge, Object orientation, Arrays, Looping, Conditionals.
 20% of the mark is for: Code style, code consistency, modularity, commenting.
-20% for responses (400 words): What is the function of extension?, How does the code fit into the templates design?, How have you structured the extensions code.
+20% for responses 
+(400 words): What is the function of extension?, How does the code fit into the templates design?, How have you structured the extensions code. 3 parts. (400 words together)
+next section (250 words) Did you stick to your schedule?, did you divide up task and the time effectively?, did you have an unexpected challenges or difficulties?
+next section(250words)
