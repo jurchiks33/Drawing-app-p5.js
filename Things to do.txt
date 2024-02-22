@@ -12,4 +12,5 @@ Upload Final code as a zip file.
 (400 words): What is the function of extension?, How does the code fit into the templates design?, How have you structured the extensions code. 3 parts. (400 words together)
 next section (250 words) Did you stick to your schedule?, did you divide up task and the time effectively?, did you have an unexpected challenges or difficulties?
 next section(250words) evaluating of the process. Self evaluation of the process of completing the project. System or user testing.
-List of external sources used in your project. Any code you have copied, code you have inspired by, help forums, external libraries.
+List of external sources used in your project. Any code you have copied, code you have inspired by, help forums, external libraries.(no word count for this section.)
+upload progress logs as a pdf file
