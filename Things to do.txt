@@ -1,3 +1,9 @@
 1 User testing.
 2. How users responded to application.
 3, Include in report user experience.
+
+
+In final submission upload code with several user responses.
+also upload progress log for a weekly work
+Upload Final code as a zip file.
+60% of marking will come from
