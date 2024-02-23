@@ -104,8 +104,8 @@ function setupUIListeners() {
 
     //Event listener for Undo button clicking.
     select('#undoButton').mouseClicked(function() {
-        console.log("Undo button clicked");
-        undoRedoManager.undo();
+        console.log("Undo button clicked");                 //For debugging.
+        undoRedoManager.undo();                             //Call undo function of the undo/redo manager.
     });
-    
+
 }
