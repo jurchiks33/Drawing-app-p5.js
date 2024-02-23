@@ -98,6 +98,9 @@ function initializeGlobalOptions() {
 function setupUIListeners() {
     //Changes for shape tool based un users selection.
     select('#shapeSelector').changed(function() {
-        
-    })
+        var selectShape = select('#shapeSelector').value();
+        shapeTool.changeSelectedShape(selectShape);
+    });
+
+    
 }
