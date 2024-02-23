@@ -51,12 +51,17 @@ function setup() {
 }
 
 function draw() {
-    //
+    //Check if currently selected tool in a toolbx has a draw method and calls it.
 	if (toolbox.selectedTool.hasOwnProperty("draw")) {
 		toolbox.selectedTool.draw();
 	} else {
 		alert("it doesn't look like your tool has a draw method!");
 	}
+}
+
+function windowResized() {
+    //Resize canvas iw window is resized.
+    resizeCanvas(windowHeight, windowHeight);
 }
 
 function mousePressed() {
