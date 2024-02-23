@@ -1,0 +1,1 @@
+Fix drawing area is not expanding after switched to full screen.
