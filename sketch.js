@@ -98,9 +98,14 @@ function initializeGlobalOptions() {
 function setupUIListeners() {
     //Changes for shape tool based un users selection.
     select('#shapeSelector').changed(function() {
-        var selectShape = select('#shapeSelector').value();
-        shapeTool.changeSelectedShape(selectShape);
+        var selectShape = select('#shapeSelector').value(); //Get value of selected shape.
+        shapeTool.changeSelectedShape(selectShape);         //Change shape in shape tool for selected one.
     });
 
+    //Event listener for Undo button clicking.
+    select('#undoButton').mouseClicked(function() {
+        console.log("Undo button clicked");
+        undoRedoManager.undo();
+    });
     
 }
