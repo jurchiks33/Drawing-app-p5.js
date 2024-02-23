@@ -7,23 +7,20 @@ var colourP = null;
 var helpers = null;
 var shapeTool = null;
 var undoRedoManager = null;
+var canvasContainer;
 
 function setup() {
-    // Create a canvas to fill the content div from index.html
+    // Select container for the canvas
     canvasContainer = select('#content');
-    var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
+
+    //Create canvas that fills the container.
+    var c = createCanvas(windowWidth, windowHeight);
     c.parent("content");
 
     // Initialize the brush size
     brushSize = 10; // Set a default size
 
-    // Create the size slider
-    var brushSlider = createSlider(1, 100, brushSize);
-    brushSlider.class('brush-size-slider'); // Add a unique class
-    brushSlider.parent(select('.options'));
-    brushSlider.input(() => {
-        brushSize = brushSlider.value();
-    });
+
 
     // Create helper functions and the colour palette
     helpers = new HelperFunctions();
