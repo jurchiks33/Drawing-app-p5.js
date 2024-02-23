@@ -20,15 +20,13 @@ function setup() {
     // Initialize the brush size
     brushSize = 10; // Set a default size
 
+    //Initialize global options.
+    initializeGlobalOptions();
 
-
-    // Create helper functions and the colour palette
+    // initialize helper, colour palette and toolbox and undo/redo functions
     helpers = new HelperFunctions();
     colourP = new ColourPalette();
-
-    // Create a toolbox for storing the tools
     toolbox = new Toolbox();
-
     undoRedoManager = new UndoRedoManager();
 
     // Add the tools to the toolbox
@@ -39,35 +37,21 @@ function setup() {
 
     shapeTool = new ShapeTools();
     toolbox.addTool(shapeTool);
+
+    //Setting background to white
     background(255);
 
     var customBrush = new CustomBrush();
     toolbox.addTool(customBrush);
 
-    // Event listeners for UI elements
-    select('#shapeSelector').changed(function() {
-        var selectedShape = select('#shapeSelector').value();
-        shapeTool.changeSelectedShape(selectedShape); 
-    });
-
-    select('#undoButton').mouseClicked(function() {
-        console.log("Undo button clicked");
-        undoRedoManager.undo();
-    });
-    
-    select('#redoButton').mouseClicked(function() {
-        console.log("Redo button clicked");
-        undoRedoManager.redo();
-    });
+    //Setup for event listeners for UI elements.
+    setupUIListeners();
 
     undoRedoManager.saveState();
 }
 
 function draw() {
-	//call the draw function from the selected tool.
-	//hasOwnProperty is a javascript function that tests
-	//if an object contains a particular method or property
-	//if there isn't a draw method the app will alert the user
+    //
 	if (toolbox.selectedTool.hasOwnProperty("draw")) {
 		toolbox.selectedTool.draw();
 	} else {
