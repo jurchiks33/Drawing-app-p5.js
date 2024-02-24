@@ -5,5 +5,7 @@ var themes = {
     "Christmas": {
         backgroundColor: "#FF0000",
         buttonColor: "#FFFFFF",
+        slideColor: "#00FF00",
+        
     }
 }
