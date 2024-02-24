@@ -6,6 +6,7 @@ var themes = {
         backgroundColor: "#FF0000",
         buttonColor: "#FFFFFF",
         slideColor: "#00FF00",
-        
-    }
+        toolIconColor: "#FFFFFF",
+    },
+
 }
