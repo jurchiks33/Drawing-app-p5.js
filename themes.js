@@ -2,5 +2,8 @@
 
 //below are themes for app, starting with 4 and after adding more as needed.
 var themes = {
-
+    "Christmas": {
+        backgroundColor: "#FF0000",
+        buttonColor: "#FFFFFF",
+    }
 }
