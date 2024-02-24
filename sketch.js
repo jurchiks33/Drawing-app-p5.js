@@ -92,7 +92,12 @@ function initializeGlobalOptions() {
     brushSlider.parent(select('.options'));
     brushSlider.input(() => {
         brushSize = brushSlider.value();
+        //label for a brush slider.
+        brushSizeLabel.html('Brush Size:' + brushSize);
     });
+
+    //Creating a label for a brush size slider.
+    var brushSizeLabel = createDiv('Brush Size:' + brushSize);
 }
 
 function setupUIListeners() {
