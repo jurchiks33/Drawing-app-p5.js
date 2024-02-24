@@ -98,6 +98,11 @@ function initializeGlobalOptions() {
 
     //Creating a label for a brush size slider.
     var brushSizeLabel = createDiv('Brush Size:' + brushSize);
+    brushSizeLabel.class('brush-size-label');
+    brushSizeLabel.parent(select('.options'));
+
+    //Position of a label above the slider.
+    brushSizeLabel.position(brushSlider.x, brushSlider.y - 20);
 }
 
 function setupUIListeners() {
