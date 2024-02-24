@@ -1,2 +1,3 @@
 Fix drawing area is not expanding after switched to full screen. "FIXED"
 need text to display over brush scroller.
+Also need to adjust starting brush size, it is not as it is on a brush size scroller.
