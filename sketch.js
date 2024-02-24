@@ -61,7 +61,7 @@ function draw() {
 
 function windowResized() {
     //Resize canvas iw window is resized.
-    resizeCanvas(windowHeight, windowHeight);
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 function mousePressed() {
