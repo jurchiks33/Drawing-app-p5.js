@@ -101,7 +101,7 @@ function initializeGlobalOptions() {
     brushSizeLabel.class('brush-size-label');
     brushSizeLabel.parent(select('.options'));
 
-    //Position of a label above the slider.
+    //Position of a label below the slider.
     brushSizeLabel.position(brushSlider.x, brushSlider.y - 20);
 }
 
