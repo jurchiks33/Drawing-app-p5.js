@@ -13,5 +13,17 @@ var themes = {
         buttonColor: "#000000",         // Black
         slideColor: "#FFD700",          // Gold
         toolIconColor: "#FFFFFF",       // White
+    },
+    "Classic": {
+        backgroundColor: "#FFFFFF",     // White
+        buttonColor: "#000000",         // Black
+        slideColor: "#C0C0C0",          // Silver
+        toolIconColor: "#000000",       // Black
+    },
+    "Cosmic": {
+        backgroundColor: "#0B3D91",     // Dark Blue
+        buttonColor: "#FFA500",         // Orange
+        slideColor: "#800080",          // Purple
+        toolIconColor: "#FFFFFF",       //White
     }   
 }
