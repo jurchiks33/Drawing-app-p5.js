@@ -49,6 +49,9 @@ function applyTheme(themeName) {
         });
 
         //Set tool icon colors
-        
+        var toolIcons = document.querySelectorAll('.tool-icon');
+        toolIcons.forEach(function(icon) {
+            icon.style.color = theme.toolIconColor;
+        });
     }
 }
