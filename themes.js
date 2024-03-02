@@ -26,4 +26,16 @@ var themes = {
         slideColor: "#800080",          // Purple
         toolIconColor: "#FFFFFF",       //White
     }   
+};
+
+// Function to apply a theme.
+function applyTheme(themeName) {
+    var theme = themes[themeName];
+    if(theme) {
+        //set background color.
+        document.body.style.backgroundColor = theme.backgroundColor;
+
+        //set button color
+        
+    }
 }
