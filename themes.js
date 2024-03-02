@@ -36,6 +36,10 @@ function applyTheme(themeName) {
         document.body.style.backgroundColor = theme.backgroundColor;
 
         //set button color
-        
+        var buttons = document.querySelectorAll('.button');
+        buttons.forEach(function(button) {
+            button.style.backgroundColor = theme.buttonColor;
+            button.style.color = theme.toolIconColor;
+        });
     }
 }
