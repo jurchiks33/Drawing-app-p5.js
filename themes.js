@@ -41,5 +41,14 @@ function applyTheme(themeName) {
             button.style.backgroundColor = theme.buttonColor;
             button.style.color = theme.toolIconColor;
         });
+
+        //Set slider color
+        var sliders = document.querySelectorAll('.brush-size-slider');
+        sliders.forEach(function(slider) {
+            slider.style.backgroundColor = theme.slideColor;
+        });
+
+        //Set tool icon colors
+        
     }
 }
