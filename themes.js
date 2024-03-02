@@ -24,7 +24,7 @@ var themes = {
         backgroundColor: "#0B3D91",     // Dark Blue
         buttonColor: "#FFA500",         // Orange
         slideColor: "#800080",          // Purple
-        toolIconColor: "#FFFFFF",       //White
+        toolIconColor: "#FFFFFF",       // White
     }   
 };
 
@@ -53,5 +53,16 @@ function applyTheme(themeName) {
         toolIcons.forEach(function(icon) {
             icon.style.color = theme.toolIconColor;
         });
+    } else {
+        console.error('Theme not found:', themeName);
     }
+}
+
+//Function below to allow users to select a theme.
+function setupThemeSelector() {
+    var themeSelector = select('#themeSelector');
+    themeSelector.changed(function() {
+        var selectedTheme = themeSelector.value();
+        applyTheme(selectedTheme);
+    });
 }
