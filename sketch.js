@@ -47,6 +47,9 @@ function setup() {
     //Setup for event listeners for UI elements.
     setupUIListeners();
 
+    //Calling setupThemeSelector function from themes.js
+    setupThemeSelector();
+
     undoRedoManager.saveState();
 }
 
