@@ -47,10 +47,10 @@ function setup() {
     //Setup for event listeners for UI elements.
     setupUIListeners();
 
+    undoRedoManager.saveState();
+
     //Calling setupThemeSelector function from themes.js
     setupThemeSelector();
-
-    undoRedoManager.saveState();
 }
 
 function draw() {
