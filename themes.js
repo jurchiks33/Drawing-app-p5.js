@@ -97,8 +97,13 @@ function applyTheme(themeName) {
 }
 function setupThemeSelector() {
     var themeSelector = select('#themeSelector');
-    themeSelector.changed(function() {
-        var selectedTheme = themeSelector.value();
-        applyTheme(selectedTheme);
+    if (themeSelector) {
+        themeSelector.changed(()  => {
+            var selectedTheme = themeSelector.value();
+            applyTheme(selectedTheme);
     });
+
+    } else {
+        console.error('Theme selector not found');
+    }
 }
