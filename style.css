@@ -88,4 +88,7 @@ html, body {
 .cosmic { background-color: #0B3D91;}
 
 /*Button colors and slider*/
-.christmas .button, .christmas .brush-size-slider { background-color: #FFFFFF; color: #00FF00;}
+.christmas .button, .christmas .brush-size-slider { background-color: #FFFFFF; color: #00FF00; }
+.city .button, .city .brush-size-slider { background-color: #000000; color: #FFD700; }
+.classic .button, .classic .brush-size-slider { background-color: #000000; color: #C0C0C0;}
+.cosmic .button, .cosmic .brush-size-slider { background-color: #FFA500; color: #800080;}
