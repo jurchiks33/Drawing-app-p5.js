@@ -92,3 +92,9 @@ html, body {
 .city .button, .city .brush-size-slider { background-color: #000000; color: #FFD700; }
 .classic .button, .classic .brush-size-slider { background-color: #000000; color: #C0C0C0;}
 .cosmic .button, .cosmic .brush-size-slider { background-color: #FFA500; color: #800080;}
+
+/*Tool icon colors*/
+.christmas .tool-icon { color: #FFFFFF; }
+.city .tool-icon { color: #FFFFFF; }
+.classic .tool-icon { color: #000000; }
+.cosmic .tool-icon { color: #FFFFFF;}
