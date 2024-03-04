@@ -79,3 +79,13 @@ html, body {
 .brush-size-slider {
     margin-top: 2cm; /* Adjusting margin under horizonatl/vertical button */
 }
+
+/* Below is starting Theme styling CSS */
+/*Theme backgrounds*/
+.christmas { background-color: #FF0000; }
+.city { background-color: #707070; }
+.classic { background-color: #FFFFFF; }
+.cosmic { background-color: #0B3D91;}
+
+/*Button colors and slider*/
+.christmas .button, .christmas .brush-size-slider { background-color: #FFFFFF; color: #00FF00;}
