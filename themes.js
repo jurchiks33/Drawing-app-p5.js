@@ -75,6 +75,30 @@ function applyTheme(themeName) {
         document.body.classList.add(themeClass);
         document.body.style.backgroundColor = theme.backgroundColor;
 
-        
+        var buttons = document.querySelectorAll('.button');
+        buttons.forEach(function(button) {
+            button.style.backgroundColor = theme.buttonColor;
+            button.style.color = theme.toolIconColor;
+        });
+        var sliders = document.querySelectorAll('.brush-size-slider');
+         sliders.forEach(function(slider) {
+            slider.style.backgroundColor = theme.slideColor;
+        });
+
+        //Set tool icon colors
+        var toolIcons = document.querySelectorAll('.tool-icon');
+        toolIcons.forEach(function(icon) {
+            icon.style.color = theme.toolIconColor;
+        });
+    } else {
+        console.error('Theme not found:', themeName);
     }
+
+}
+function setupThemeSelector() {
+    var themeSelector = select('#themeSelector');
+    themeSelector.changed(function() {
+        var selectedTheme = themeSelector.value();
+        applyTheme(selectedTheme);
+    });
 }
