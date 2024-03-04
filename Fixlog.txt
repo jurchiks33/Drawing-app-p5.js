@@ -1,7 +1,13 @@
-Fix drawing area is not expanding after switched to full screen. "FIXED"
-need text to display over brush scroller.(FIXED)
-Also need to adjust starting brush size, it is not as it is on a brush size scroller. (FIXED)
-Need to fix BUG when switched to mirror tool, and after switched to other tools, scrollbar is disapearing. maybe overlaping, try to move to the top bar.
-Themes switch need to be done!(FIXED)
-Themes switch is not working.
-Themes visuals are broken and cover all screen. Most likely CSS is overwriting themes in theme.js. Need to fix it, most likely use of !important in CSS (Fixed)
+1--- Fix drawing area is not expanding after switched to full screen. "FIXED"
+
+2--- Need text to display over brush scroller.(FIXED)
+
+3--- Also need to adjust starting brush size, it is not as it is on a brush size scroller. (FIXED)
+
+4--- Need to fix BUG when switched to mirror tool, and after switched to other tools, scrollbar is disapearing. maybe overlaping, try to move to the top bar.
+
+5--- Themes switch need to be done!(FIXED)
+
+6--- Themes switch is not working. Try to make theme manipulations directly in CSS, instead of themes.js and link it to the theme changing
+
+7--- Themes visuals are broken and cover all screen. Most likely CSS is overwriting themes in theme.js. Need to fix it, most likely use of !important in CSS (Fixed)
