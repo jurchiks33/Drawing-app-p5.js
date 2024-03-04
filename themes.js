@@ -59,10 +59,22 @@ function applyTheme(themeName) {
 }
 
 //Function below to allow users to select a theme.
-function setupThemeSelector() {
-    var themeSelector = select('#themeSelector');
-    themeSelector.changed(function() {
-        var selectedTheme = themeSelector.value();
-        applyTheme(selectedTheme);
-    });
-}
+// function setupThemeSelector() {
+//     var themeSelector = select('#themeSelector');
+//     themeSelector.changed(function() {
+//         var selectedTheme = themeSelector.value();
+//         applyTheme(selectedTheme);
+//     });
+// }
+
+    function setupThemeSelector() {
+        var themeSelector = document.querySelector('#themeSelector');
+        if (themeSelector) {
+            themeSelector.addEventListener('change', function() {
+                var selectedTheme = themeSelector.value;
+                applyTheme(selectedTheme);
+            });
+        } else {
+            console.error('Theme selector not found');
+        }
+    }
