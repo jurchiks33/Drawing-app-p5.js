@@ -2,33 +2,46 @@
 
 //below are themes for app, starting with 4 and after adding more as needed.
 var themes = {
+    // "Christmas": {
+    //     backgroundColor: "#FF0000",        // Red
+    //     buttonColor: "#55801F",            // Christmas dark green, Button color
+    //     slideColor: "#00FF00",             // Green
+    //     toolIconColor: "#FFB5B5",          // Light red for text in buttons
+    //     boxBackgroundColor: "#D14836",     // Bottom and side box
+    //     headerBackgroundColor: "#A5FF33",  // Christmas light green, header
+    // },
     "Christmas": {
-        backgroundColor: "#FF0000",        // Red
-        buttonColor: "#55801F",            // Christmas dark green, Button color
-        slideColor: "#00FF00",             // Green
-        toolIconColor: "#FFB5B5",          // Light red for text in buttons
-        boxBackgroundColor: "#D14836",     // Bottom and side box
-        headerBackgroundColor: "#A5FF33",  //Christmas light green, header
+        backgroundColor: "#FF0000",       // Red, for general background
+        buttonColor: "#C8102E",           // Berry Red, for button color
+        slideColor: "#C0C0C0",            // Snowy Silver, for slider
+        toolIconColor: "#FFFFFF",         // Crisp White, for icons
+        boxBackgroundColor: "#D14836",    // red for boxes
+        headerBackgroundColor: "#A5FF33", // Christmas light green, header
     },
+
     "City": {
-        backgroundColor: "#707070",     // Grey
-        buttonColor: "#C75D00",         // Black, button color
-        slideColor: "#FFD700",          // Gold
-        toolIconColor: "#FFFFFF",       // White Button text color
-        boxBackgroundColor: "#D2AF6C",     //Bottom and side box
-        headerBackgroundColor: "#9E988D",  //Header
+        backgroundColor: "#707070",        // Grey
+        buttonColor: "#C75D00",            // Black, button color
+        slideColor: "#FFD700",             // Gold
+        toolIconColor: "#FFFFFF",          // White Button text color
+        boxBackgroundColor: "#D2AF6C",     // Bottom and side box
+        headerBackgroundColor: "#9E988D",  // Header
     },
     "Classic": {
-        backgroundColor: "#FFFFFF",     // White
-        buttonColor: "#000000",         // Black
-        slideColor: "#C0C0C0",          // Silver
-        toolIconColor: "#000000",       // Black
+        backgroundColor: "#FFFFFF",        // White
+        buttonColor: "#FFFFFF",            // Black, button color
+        slideColor: "#C0C0C0",             // Silver, 
+        toolIconColor: "#000000",          // Black, button text color
+        boxBackgroundColor: "#DDDAD7",     // Bottom and side box
+        headerBackgroundColor: "#848484",  // Header
     },
     "Cosmic": {
-        backgroundColor: "#0B3D91",     // Dark Blue
-        buttonColor: "#FFA500",         // Orange
-        slideColor: "#800080",          // Purple
-        toolIconColor: "#FFFFFF",       // White
+        backgroundColor: "#0B3D91",        // Dark Blue
+        buttonColor: "#7B1FA2",            // Orange
+        slideColor: "#800080",             // Purple
+        toolIconColor: "#FFFFFF",          // White
+        boxBackgroundColor: "#2C2C34",     // Bottom and side box
+        headerBackgroundColor: "#030201",  // Header
     }   
 };
 
