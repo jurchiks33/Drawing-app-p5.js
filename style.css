@@ -5,6 +5,8 @@
 
 	--background-color: #fff;
 	--button-color: #444;
+	--slider-control: #ccc;
+	--tool-icon-color: #444;
 }
 /*Here ends testing part*/
 
@@ -77,13 +79,14 @@ html, body {
 		color: #444;
 	}
 .box {
-  background-color: #444;   /*this one*/
+  background-color: var(--box-bg-color);   /*this one*/
   color: #fff;
   font-size: 150%;
 }
 
 .header {
-  background-color: #999;    /*this one*/
+  background-color: var(--header-bg-color);
+  font-family: Arial, Helvetica, sans-serif;    /*this one*/
 }
 
 .brush-size-slider {
