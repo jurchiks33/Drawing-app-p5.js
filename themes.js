@@ -67,34 +67,66 @@ var themes = {
 //     });
 // }
 
+// function applyTheme(themeName) {
+//     var theme = themes[themeName];
+//     if(theme) {
+//         var themeClass = themeName.toLowerCase();
+//         document.body.classList.remove('christmas', 'city', 'classic', 'cosmic');
+//         document.body.classList.add(themeClass);
+//         document.body.style.backgroundColor = theme.backgroundColor;
+
+//         var buttons = document.querySelectorAll('.button');
+//         buttons.forEach(function(button) {
+//             button.style.backgroundColor = theme.buttonColor;
+//             button.style.color = theme.toolIconColor;
+//         });
+//         var sliders = document.querySelectorAll('.brush-size-slider');
+//          sliders.forEach(function(slider) {
+//             slider.style.backgroundColor = theme.slideColor;
+//         });
+
+//         //Set tool icon colors
+//         var toolIcons = document.querySelectorAll('.tool-icon');
+//         toolIcons.forEach(function(icon) {
+//             icon.style.color = theme.toolIconColor;
+//         });
+//     } else {
+//         console.error('Theme not found:', themeName);
+//     }
+
+// }
+
 function applyTheme(themeName) {
     var theme = themes[themeName];
-    if(theme) {
-        var themeClass = themeName.toLowerCase();
-        document.body.classList.remove('christmas', 'city', 'classic', 'cosmic');
-        document.body.classList.add(themeClass);
-        document.body.style.backgroundColor = theme.backgroundColor;
+    if (theme) {
+        document.documentElement.style.setProperty('--background-color', theme.backgroundColor);
+        document.documentElement.style.setProperty('--button-color', theme.buttonColor);
+        document.documentElement.style.setProperty('--slider-color', theme.slideColor);
+        document.documentElement.style.setProperty('--tool-icon-color', theme.toolIconColor);
+        
+        document.documentElement.style.setProperty('--box-bg-color', theme.boxBackgroundColor || theme.backgroundColor);
+        document.documentElement.style.setProperty('--header-bg-color', theme.headerBackgroundColor || theme.backgroundColor);
 
         var buttons = document.querySelectorAll('.button');
-        buttons.forEach(function(button) {
+        buttons.forEach(button => {
             button.style.backgroundColor = theme.buttonColor;
             button.style.color = theme.toolIconColor;
         });
+
         var sliders = document.querySelectorAll('.brush-size-slider');
-         sliders.forEach(function(slider) {
+        sliders.forEach(slider => {
             slider.style.backgroundColor = theme.slideColor;
         });
 
-        //Set tool icon colors
         var toolIcons = document.querySelectorAll('.tool-icon');
-        toolIcons.forEach(function(icon) {
+        toolIcons.forEach(icon => {
             icon.style.color = theme.toolIconColor;
         });
     } else {
         console.error('Theme not found:', themeName);
     }
-
 }
+
 function setupThemeSelector() {
     var themeSelector = select('#themeSelector');
     if (themeSelector) {
