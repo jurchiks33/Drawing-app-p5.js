@@ -90,7 +90,17 @@ html, body {
 }
 
 .brush-size-slider {
+	background-color: var(--slider-color);
     margin-top: 2cm; /* Adjusting margin under horizonatl/vertical button */
+}
+
+.button {
+	background-color: var(--button-color);
+	color: var(--tool-icon-color);
+}
+
+.tool-icon {
+	color: var(--tool-icon-color);
 }
 
 /* Below is starting Theme styling CSS */
