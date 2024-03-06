@@ -1,3 +1,13 @@
+/*Here comes testing part*/
+:root {
+	--box-bg-color: #444;
+	--header-bg-color: #999;
+
+	--background-color: #fff;
+	--button-color: #444;
+}
+/*Here ends testing part*/
+
 html, body {
   margin: 0px;
   height: 100%;
@@ -67,13 +77,13 @@ html, body {
 		color: #444;
 	}
 .box {
-  background-color: #444;
+  background-color: #444;   /*this one*/
   color: #fff;
   font-size: 150%;
 }
 
 .header {
-  background-color: #999;
+  background-color: #999;    /*this one*/
 }
 
 .brush-size-slider {
