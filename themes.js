@@ -7,6 +7,8 @@ var themes = {
         buttonColor: "#FFFFFF",         // White
         slideColor: "#00FF00",          // Green
         toolIconColor: "#FFFFFF",       // White
+        boxBackgroundColor: "#D14836",     //change colors
+        headerBackgroundColor: "#FFCC00",  //change colors
     },
     "City": {
         backgroundColor: "#707070",     // Grey
