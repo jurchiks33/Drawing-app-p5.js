@@ -4,7 +4,7 @@
 	--header-bg-color: #999;
 
 	--background-color: #fff;
-	--button-color: #444;
+	--button-color: #ffffff;
 	--slider-color: #ccc;
 	--tool-icon-color: #444;
 }
@@ -105,19 +105,19 @@ html, body {
 
 /* Below is starting Theme styling CSS */
 /*Theme backgrounds*/
-.christmas { background-color: #FF0000; }
+/* .christmas { background-color: #FF0000; }
 .city { background-color: #707070; }
 .classic { background-color: #FFFFFF; }
-.cosmic { background-color: #0B3D91;}
+.cosmic { background-color: #0B3D91;} */
 
 /*Button colors and slider*/
-.christmas .button, .christmas .brush-size-slider { background-color: #FFFFFF; color: #00FF00; }
+/* .christmas .button, .christmas .brush-size-slider { background-color: #FFFFFF; color: #00FF00; }
 .city .button, .city .brush-size-slider { background-color: #000000; color: #FFD700; }
 .classic .button, .classic .brush-size-slider { background-color: #000000; color: #C0C0C0;}
-.cosmic .button, .cosmic .brush-size-slider { background-color: #FFA500; color: #800080;}
+.cosmic .button, .cosmic .brush-size-slider { background-color: #FFA500; color: #800080;} */
 
 /*Tool icon colors*/
-.christmas .tool-icon { color: #FFFFFF; }
+/* .christmas .tool-icon { color: #FFFFFF; }
 .city .tool-icon { color: #FFFFFF; }
 .classic .tool-icon { color: #000000; }
-.cosmic .tool-icon { color: #FFFFFF;}
+.cosmic .tool-icon { color: #FFFFFF;} */

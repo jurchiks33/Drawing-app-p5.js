@@ -11,7 +11,7 @@
 6--- Themes switch is not working. Try to make theme manipulations directly in CSS, instead of themes.js and link it to the theme changing (Partially FIXED, Read below)
      Update. Themes are working, but need to link rest of tools to them. Experimental changes on boxBackgroundColor and headerBackgroundColor are working
      use them as example to fix rest of the tools.
-     Buttons are not changing color with themes. console log shows that apply theme to 0 buttons, which means code cant find class button. need to implement in html.
+     Buttons are not changing color with themes. console log shows that apply theme to 0 buttons, which means code cant find class button. need to implement in html. (FIXED)
 
      Things get messy, i need to clean up code. (FIXED)
 

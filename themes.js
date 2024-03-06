@@ -3,18 +3,20 @@
 //below are themes for app, starting with 4 and after adding more as needed.
 var themes = {
     "Christmas": {
-        backgroundColor: "#FF0000",     // Red
-        buttonColor: "#FFFFFF",         // White
-        slideColor: "#00FF00",          // Green
-        toolIconColor: "#FFFFFF",       // White
-        boxBackgroundColor: "#D14836",     //change colors
-        headerBackgroundColor: "#FFCC00",  //change colors
+        backgroundColor: "#FF0000",        // Red
+        buttonColor: "#55801F",            // Christmas dark green, Button color
+        slideColor: "#00FF00",             // Green
+        toolIconColor: "#FFB5B5",          // Light red for text in buttons
+        boxBackgroundColor: "#D14836",     // Bottom and side box
+        headerBackgroundColor: "#A5FF33",  //Christmas light green, header
     },
     "City": {
         backgroundColor: "#707070",     // Grey
-        buttonColor: "#000000",         // Black
+        buttonColor: "#C75D00",         // Black, button color
         slideColor: "#FFD700",          // Gold
-        toolIconColor: "#FFFFFF",       // White
+        toolIconColor: "#FFFFFF",       // White Button text color
+        boxBackgroundColor: "#D2AF6C",     //Bottom and side box
+        headerBackgroundColor: "#9E988D",  //Header
     },
     "Classic": {
         backgroundColor: "#FFFFFF",     // White
