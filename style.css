@@ -89,14 +89,8 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;    /*this one*/
 }
 
-.button {
-	background-color: var(--button-color);
-	color: var(--tool-icon-color);
-}
-
 .brush-size-slider {
     margin-top: 2cm; /* Adjusting margin under horizonatl/vertical button */
-	background-color: var(--slider-color);
 }
 
 /* Below is starting Theme styling CSS */
