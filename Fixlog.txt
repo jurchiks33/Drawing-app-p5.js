@@ -16,3 +16,5 @@
      Things get messy, i need to clean up code. (FIXED)
 
 7--- Themes visuals are broken and cover all screen. Most likely CSS is overwriting themes in theme.js. Need to fix it, most likely use of !important in CSS (Fixed)
+
+8---  Work on a random image generator.

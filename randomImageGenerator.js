@@ -7,4 +7,10 @@ function addRandomImageGenerator() {
     pixelInput.size(100);
 
     drawButton = createButton('Draw Random');
+    drawButton.position(120, height + 40); //Adjust position if needed.
+    drawButton.mousePressed(() => {
+        const totalPixels = parseInt(pixelInput.value());
+        drawRandomPixels(totalPixels);
+    });
 }
+
