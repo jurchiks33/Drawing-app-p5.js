@@ -18,3 +18,5 @@
 7--- Themes visuals are broken and cover all screen. Most likely CSS is overwriting themes in theme.js. Need to fix it, most likely use of !important in CSS (Fixed)
 
 8---  Work on a random image generator.
+      Image generator function, button and input field is set up. When i click the button to generate random image, drawing is not appearing, need to fix it,
+      need to check setInterval and try to debug it.
