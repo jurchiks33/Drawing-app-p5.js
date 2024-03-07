@@ -139,4 +139,14 @@ function setupUIListeners() {
         console.log("Redo button clicked");                 //Log for debugging.
         undoRedoManager.redo();                             //Call redo function of the undo/redo manager.
     });
+
+
+//Experimential starts
+
+function windowResized() {
+    // Recalculate the available width and height
+    let availableWidth = windowWidth - select('#sidebar').width;
+    let availableHeight = windowHeight; // Adjust as needed
+
+//Experimential ends
 }
