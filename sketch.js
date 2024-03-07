@@ -51,6 +51,9 @@ function setup() {
 
     //Calling setupThemeSelector function from themes.js
     setupThemeSelector();
+
+    //Setup of random image generation feature.
+    addRandomImageGenerator();
 }
 
 function draw() {
