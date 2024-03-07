@@ -14,3 +14,12 @@ function addRandomImageGenerator() {
     });
 }
 
+function drawRandomPixels(totalPixels) {
+    for (let i = 0; i < totalPixels; i++) {
+        let x = floor(random(width));
+        let y = floor(random(height));
+        let col = color(random(255), random(255), random(255));
+        setInterval(x, y, col);
+    }
+    updatePixels();
+}
