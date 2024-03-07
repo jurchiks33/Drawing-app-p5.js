@@ -14,7 +14,13 @@ function setup() {
     canvasContainer = select('#content');
 
     //Here is coming experimental feature
+
     let availableWidth = windowWidth - select('#sidebar').width;
+
+    let availableHeight = windowHeight;
+
+    var c = createCanvas(availableWidth, availableHeight);
+    c.parent("content");
     //Here ends experimental feature.
 
     //Create canvas that fills the container.
