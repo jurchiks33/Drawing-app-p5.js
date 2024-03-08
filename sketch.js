@@ -12,20 +12,21 @@ var canvasContainer;
 function setup() {
     // Select container for the canvas
     canvasContainer = select('#content');
+    var optionsBox = select('.options');
 
     //Here is coming experimental feature
 
     let availableWidth = windowWidth - select('#sidebar').width;
 
-    let availableHeight = windowHeight;
+    let availableHeight = windowHeight - optionsBox.height - 20;
 
     var c = createCanvas(availableWidth, availableHeight);
     c.parent("content");
     //Here ends experimental feature.
 
-    //Create canvas that fills the container.
-    var c = createCanvas(windowWidth, windowHeight);
-    c.parent("content");
+    // //Create canvas that fills the container.
+    // var c = createCanvas(windowWidth, windowHeight);
+    // c.parent("content");
 
     // Initialize the brush size
     brushSize = 10; // Set a default size
