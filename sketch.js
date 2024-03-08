@@ -80,6 +80,12 @@ function windowResized() {
     //Recalculate the available width and height.
     let sidebarWidth = select('#sidebar').width;
     let headerHeight = select('.header').height;
+    let optionsBoxHeight = select('.options').height;
+
+    //Adjust available height calculation by subtracting header and options box height.
+    let availableWidth = windowWidth - sidebarWidth;
+    let availableHeight = windowHeight - headerHeight - optionsBoxHeight;
+    
     //Resize canvas if window is resized.
     resizeCanvas(windowWidth, windowHeight);
 }
