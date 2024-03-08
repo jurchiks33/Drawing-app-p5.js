@@ -22,8 +22,7 @@ function setup() {
 
     var c = createCanvas(availableWidth, availableHeight);
     c.parent("content");
-
-    windowResized();
+    
     //Here ends experimental feature.
 
     // //Create canvas that fills the container.
@@ -86,6 +85,7 @@ function windowResized() {
     let sidebar = select('#sidebar');
     let header = select('.header');
     let options = select('.options');
+    // let footer = select('.footer');   //if i will have one
 
     let newHeight = windowHeight - header.height - options.height;
     let newWidth = windowWidth - sidebar.width;
