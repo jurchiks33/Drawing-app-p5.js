@@ -77,7 +77,10 @@ function draw() {
 }
 
 function windowResized() {
-    //Resize canvas iw window is resized.
+    //Recalculate the available width and height.
+    let sidebarWidth = select('#sidebar').width;
+    let headerHeight = select('.header').height;
+    //Resize canvas if window is resized.
     resizeCanvas(windowWidth, windowHeight);
 }
 
