@@ -81,11 +81,13 @@ function windowResized() {
     let options = select('.options');
     // let footer = select('.footer');   //if i will have one
 
-    let newHeight = windowHeight - header.height - options.height;
-    let newWidth = windowWidth - sidebar.width;
+    if (sidebar && header && options) {
+        let newHeight = windowHeight - header.height - options.height;
+        let newWidth = windowWidth - sidebar.width;
 
-    //Resize canvas if window is resized.
-    resizeCanvas(newWidth, newHeight);
+        //Resize canvas if window is resized.
+        resizeCanvas(newWidth, newHeight);
+    }
 }
 
 function mousePressed() {
