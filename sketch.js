@@ -65,6 +65,9 @@ function setup() {
 
     //Setup of random image generation feature.
     addRandomImageGenerator();
+
+    //Ensure that canvas fits available space when setup is compleate.
+    windowResized();
 }
 
 function draw() {
@@ -85,7 +88,7 @@ function windowResized() {
     //Adjust available height calculation by subtracting header and options box height.
     let availableWidth = windowWidth - sidebarWidth;
     let availableHeight = windowHeight - headerHeight - optionsBoxHeight;
-    
+
     //Resize canvas if window is resized.
     resizeCanvas(windowWidth, windowHeight);
 }
@@ -153,13 +156,13 @@ function setupUIListeners() {
 
 //Experimential starts
 
-function windowResized() {
-    // Recalculate the available width and height
-    let availableWidth = windowWidth - select('#sidebar').width;
-    let optionsBox = select('.options');
-    let availableHeight = windowHeight - optionsBox.height - 20; // Adjust as needed
-    // Resize canvas to fit the new available space
-    resizeCanvas(availableWidth, availableHeight);
-}
-//Experimential ends
+// function windowResized() {
+//     // Recalculate the available width and height
+//     let availableWidth = windowWidth - select('#sidebar').width;
+//     let optionsBox = select('.options');
+//     let availableHeight = windowHeight - optionsBox.height - 20; // Adjust as needed
+//     // Resize canvas to fit the new available space
+//     resizeCanvas(availableWidth, availableHeight);
+// }
+// //Experimential ends
 }
