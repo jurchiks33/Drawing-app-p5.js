@@ -14,13 +14,25 @@ function addRandomImageGenerator() {
     });
 }
 
+// function drawRandomPixels(totalPixels) {
+//     loadPixels();   //preparing canvas for pixel manipulation.
+//     for (let i = 0; i < totalPixels; i++) {
+//         let x = floor(random(width));
+//         let y = floor(random(height));
+//         let col = color(random(255), random(255), random(255));
+//         set(x, y, col);
+//     }
+//     updatePixels();
+// }
+
 function drawRandomPixels(totalPixels) {
-    loadPixels();   //preparing canvas for pixel manipulation.
+    //Choose random starting location to start drawing.
+    let x = floor(random(width));
+    let y = floor(random(height));
+
     for (let i = 0; i < totalPixels; i++) {
-        let x = floor(random(width));
-        let y = floor(random(height));
+        //set random color for each pixel.
         let col = color(random(255), random(255), random(255));
-        set(x, y, col);
+        setInterval(x, y, col);
     }
-    updatePixels();
 }
