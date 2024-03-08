@@ -22,12 +22,6 @@ function setup() {
 
     var c = createCanvas(availableWidth, availableHeight);
     c.parent("content");
-    
-    //Here ends experimental feature.
-
-    // //Create canvas that fills the container.
-    // var c = createCanvas(windowWidth, windowHeight);
-    // c.parent("content");
 
     // Initialize the brush size
     brushSize = 10; // Set a default size
@@ -89,10 +83,6 @@ function windowResized() {
 
     let newHeight = windowHeight - header.height - options.height;
     let newWidth = windowWidth - sidebar.width;
-
-    // //Adjust available height calculation by subtracting header and options box height.
-    // let availableWidth = windowWidth - sidebarWidth;
-    // let availableHeight = windowHeight - headerHeight - optionsBoxHeight;
 
     //Resize canvas if window is resized.
     resizeCanvas(newWidth, newHeight);
@@ -157,17 +147,4 @@ function setupUIListeners() {
         console.log("Redo button clicked");                 //Log for debugging.
         undoRedoManager.redo();                             //Call redo function of the undo/redo manager.
     });
-
-
-//Experimential starts
-
-// function windowResized() {
-//     // Recalculate the available width and height
-//     let availableWidth = windowWidth - select('#sidebar').width;
-//     let optionsBox = select('.options');
-//     let availableHeight = windowHeight - optionsBox.height - 20; // Adjust as needed
-//     // Resize canvas to fit the new available space
-//     resizeCanvas(availableWidth, availableHeight);
-// }
-// //Experimential ends
 }
