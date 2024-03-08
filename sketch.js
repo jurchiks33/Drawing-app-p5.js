@@ -147,7 +147,8 @@ function setupUIListeners() {
 function windowResized() {
     // Recalculate the available width and height
     let availableWidth = windowWidth - select('#sidebar').width;
-    let availableHeight = windowHeight; // Adjust as needed
+    let optionsBox = select('.options');
+    let availableHeight = windowHeight - optionsBox.height - 20; // Adjust as needed
     // Resize canvas to fit the new available space
     resizeCanvas(availableWidth, availableHeight);
 }
