@@ -22,6 +22,8 @@ function setup() {
 
     var c = createCanvas(availableWidth, availableHeight);
     c.parent("content");
+
+    windowResized();
     //Here ends experimental feature.
 
     // //Create canvas that fills the container.
@@ -81,16 +83,19 @@ function draw() {
 
 function windowResized() {
     //Recalculate the available width and height.
-    let sidebarWidth = select('#sidebar').width;
-    let headerHeight = select('.header').height;
-    let optionsBoxHeight = select('.options').height;
+    let sidebar = select('#sidebar');
+    let header = select('.header');
+    let options = select('.options');
 
-    //Adjust available height calculation by subtracting header and options box height.
-    let availableWidth = windowWidth - sidebarWidth;
-    let availableHeight = windowHeight - headerHeight - optionsBoxHeight;
+    let newHeight = windowHeight - header.height - options.height;
+    let newWidth = windowWidth - sidebar.width;
+
+    // //Adjust available height calculation by subtracting header and options box height.
+    // let availableWidth = windowWidth - sidebarWidth;
+    // let availableHeight = windowHeight - headerHeight - optionsBoxHeight;
 
     //Resize canvas if window is resized.
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(newWidth, newHeight);
 }
 
 function mousePressed() {
