@@ -1,89 +1,88 @@
-// Global variables for the application
-var brushSize;                  // Global variable for brush size
-var toolbox = null;             // Toolbox containing drawing tools
-var colourP = null;             // Colour palette for selecting colors
-var helpers = null;             // Helper functions for additional features
-var shapeTool = null;           // Tool for drawing shapes
-var undoRedoManager = null;     // Manager for undo and redo functionality
-var canvasContainer;            // Container for the canvas
+// Global variables for the application.
+var brushSize;                  // Global variable for brush size.
+var toolbox = null;             // Toolbox containing drawing tools.
+var colourP = null;             // Colour palette for selecting colors.
+var helpers = null;             // Helper functions for additional features.
+var shapeTool = null;           // Tool for drawing shapes.
+var undoRedoManager = null;     // Manager for undo and redo functionality.
+var canvasContainer;            // Container for the canvas.
 
-//Initializes the canvas and application state
+//Initializes the canvas and application state.
 function setup() {
-    canvasContainer = select('#content');   // Container setup
-    var optionsBox = select('.options');    // Options box containing UI elements
+    canvasContainer = select('#content');   // Container setup.
+    var optionsBox = select('.options');    // Options box containing UI elements.
 
-    //Calculate the available space for the canvas
+    //Calculate the available space for the canvas.
     let sidebarWidth = select('#sidebar').width;
     let availableWidth = windowWidth - sidebarWidth;
-    let availableHeight = windowHeight - optionsBox.height - 20; // Adjust the height for options box
+    let availableHeight = windowHeight - optionsBox.height - 20; // Adjust the height for options box.
     var c = createCanvas(availableWidth, availableHeight);
-    c.parent("content");     // Set the parent of the canvas for proper positioning
+    c.parent("content");     // Set the parent of the canvas for proper positioning.
 
-    // Application initialization
-    brushSize = 10;                 // Initialize the brush size to a default value
-    initializeGlobalOptions();      // Initialize global UI options
-    initializeToolsAndHelpers();    // Initialize tools and helper functions
-    setupUIListeners();             // Setup event listeners for UI elements
-    setupThemeSelector();           // Setup theme selector from themes.js
-    addRandomImageGenerator();      // Setup random image generation feature
+    // Application initialization.
+    brushSize = 10;                 // Initialize the brush size to a default value.
+    initializeGlobalOptions();      // Initialize global UI options.
+    initializeToolsAndHelpers();    // Initialize tools and helper functions.
+    setupUIListeners();             // Setup event listeners for UI elements.
+    setupThemeSelector();           // Setup theme selector from themes.js.
+    addRandomImageGenerator();      // Setup random image generation feature.
 
-    // Final setup steps
-    windowResized(); // Adjust canvas size after setup is complete
+    windowResized(); // Adjust canvas size after setup is complete.
 }
 
-// p5.js draw function: continuously executes and handles drawing
+//Continuously executes and handles drawing.
 function draw() {
     if (toolbox.selectedTool && toolbox.selectedTool.hasOwnProperty("draw")) {
-        toolbox.selectedTool.draw(); // Call the draw method of the selected tool if it exists
+        toolbox.selectedTool.draw(); // Call the draw method of the selected tool.
     } else {
         console.error("Selected tool does not have a draw method!");
     }
 }
 
-// p5.js windowResized function: adjusts canvas size when the browser window is resized
+// Adjusts canvas size when the browser window is resized.
 function windowResized() {
-    // Recalculate the available width and height for the canvas
+    // Recalculate the available width and height for the canvas.
     let sidebar = select('#sidebar');
     let header = select('.header');
     let options = select('.options');
 
-    if (sidebar && header && options) { // Ensure all UI elements are selected successfully
-        let newHeight = windowHeight - header.height - options.height; // Account for UI elements heights
-        let newWidth = windowWidth - sidebar.width; // Adjust width for sidebar
-        resizeCanvas(newWidth, newHeight); // Resize the canvas using p5.js function
+    if (sidebar && header && options) {                                 // Ensure all UI elements are selected successfully.
+        let newHeight = windowHeight - header.height - options.height;  // Account for UI elements heights.
+        let newWidth = windowWidth - sidebar.width;                     // Adjust width for sidebar.
+        resizeCanvas(newWidth, newHeight);                              // Resize the canvas.
     }
 }
 
-// Event handlers for user interaction
+// Event handlers for interaction.
 function mousePressed() {
     if (toolbox.selectedTool instanceof ShapeTools) {
-        toolbox.selectedTool.mousePressed(); // Call mousePressed on the selected shape tool
+        toolbox.selectedTool.mousePressed(); // Call mousePressed on the selected shape tool.
     }
 }
 
 function mouseReleased() {
     if (toolbox.selectedTool instanceof ShapeTools) {
-        toolbox.selectedTool.mouseReleased(); // Call mouseReleased on the selected shape tool
+        toolbox.selectedTool.mouseReleased();   // Call mouseReleased on the selected shape tool.
     }
-    undoRedoManager.saveState(); // Save the state for undo/redo functionality
+    undoRedoManager.saveState();                // Save the state for undo/redo functionality.
 }
 
 function keyPressed() {
-    if (keyCode === 90 && keyIsDown(CONTROL)) { // Ctrl + Z for undo
+    if (keyCode === 90 && keyIsDown(CONTROL)) {         // Ctrl + Z for undo.
         undoRedoManager.undo();
-    } else if (keyCode === 89 && keyIsDown(CONTROL)) { // Ctrl + Y for redo
+    } else if (keyCode === 89 && keyIsDown(CONTROL)) {  // Ctrl + Y for redo.
         undoRedoManager.redo();
     }
 }
 
-// Initializes UI related elements such as sliders and labels
+// Initializes UI related elements.
 function initializeGlobalOptions() {
-    var brushSlider = createSlider(1, 100, brushSize); // Slider for brush size
+    var brushSlider = createSlider(1, 100, brushSize);  // Slider for brush size.
     brushSlider.class('brush-size-slider');
-    brushSlider.parent(select('.options')); // Place the slider within the options box
+    brushSlider.parent(select('.options'));             // Place the slider within the options box.
     brushSlider.input(() => {
-        brushSize = brushSlider.value(); // Update the brush size when the slider is moved
-        brushSizeLabel.html('Brush Size:' + brushSize); // Update the brush size label
+        brushSize = brushSlider.value();                // Update the brush size when the slider is moved.
+        brushSizeLabel.html('Brush Size:' + brushSize); // Update the brush size label.
     });
 
     // Create a label for the brush size slider
