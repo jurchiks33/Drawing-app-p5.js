@@ -33,6 +33,11 @@ function drawRandomPixels(totalPixels) {
     for (let i = 0; i < totalPixels; i++) {
         //set random color for each pixel.
         let col = color(random(255), random(255), random(255));
-        setInterval(x, y, col);
+        set(x, y, col);
+
+        //Choose random direction by picking a random angle.
+        let angle = random(TWO_PI);
+        //Decide how far to move in a given direction.
+        let stepSize = 1 // Adjust to make larger gaps between steps/
     }
 }
