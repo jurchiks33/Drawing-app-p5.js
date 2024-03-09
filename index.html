@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <!-- Load p5.js library and its DOM extension for interactive web elements. -->
     <script src="lib/p5.min.js"></script>
     <script src="lib/p5.dom.js"></script>
 
-    <!-- add extra scripts below -->
+    <!-- Load additional JavaScript files for various drawing tools and functionalities. -->
     <script src="toolbox.js"></script>
     <script src="colourPalette.js"></script>
     <script src="helperFunctions.js"></script>
-
     <script src="freehandTool.js"></script>
     <script src="lineToTool.js"></script>
     <script src="mirrorDrawTool.js"></script>
@@ -16,42 +16,54 @@
     <script src="shapeTools.js"></script>
     <script src="undoRedoManager.js"></script>
     <script src="customBrush.js"></script>
-
     <script src="themes.js"></script>
+    <script src="sketch.js"></script>               <!-- Main sketch file for p5.js setup and draw functions. -->
+    <script src="randomImageGenerator.js"></script> <!-- Script for generating random images. -->
 
-    <script src="sketch.js"></script>
-
-    <script src="randomImageGenerator.js"></script>
-
+    <!-- Link to the external stylesheet for styling the web application. -->
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-  	<div class="wrapper">
-      <div class="box header">My Drawing App
+</head>
+<body>
+    <!-- Main wrapper div that contains all UI elements and the drawing canvas. -->
+    <div class="wrapper">
+        <!-- Header section containing controls and tool selectors. -->
+        <div class="box header">
+            My Drawing App
+            <button id="clearButton" class="button">Clear</button>
+            <button id="undoButton" class="button">Undo</button>
+            <button id="redoButton" class="button">Redo</button>
+            <button id="saveImageButton" class="button">Save Image</button>
 
-        <button id="clearButton" class="button">Clear</button>
-        <button id="undoButton" class="button">Undo</button>
-        <button id="redoButton" class="button">Redo</button>
-        <button id="saveImageButton" class="button">Save Image</button>
+            <!-- Shape selector for different drawing shapes. -->
+            <select id="shapeSelector">
+                <option value="rectangle">Rectangle</option>
+                <option value="ellipse">Ellipse</option>
+                <option value="star">Star</option>
+                <option value="triangle">Triangle</option>
+                <option value="pentagon">Pentagon</option>
+            </select>
 
-        <select id="shapeSelector">
-          <option value="rectangle">Rectangle</option>
-          <option value="ellipse">Ellipse</option>
-          <option value="star">Star</option>
-          <option value="triangle">Triangle</option>
-          <option value="pentagon">Pentagon</option>
-        </select>
-        <select id="themeSelector">
-          <option value="Christmas">Christmas</option>
-          <option value="City">City</option>
-          <option value="Classic">Classic</option>
-          <option value="Cosmic">Cosmic</option>
-        </select>
-      </div>
-      <div class="box" id="sidebar"></div>
-      <div id="content"></div>
-      <div class="box colourPalette"></div>
-      <div class="box options"></div>
-	</div>
-  </body>
+            <!-- Theme selector for changing the application's visual theme. -->
+            <select id="themeSelector">
+                <option value="Christmas">Christmas</option>
+                <option value="City">City</option>
+                <option value="Classic">Classic</option>
+                <option value="Cosmic">Cosmic</option>
+            </select>
+        </div>
+
+        <!-- Sidebar for additional tools or information. -->
+        <div class="box" id="sidebar"></div>
+
+        <!-- Main content area where the p5.js canvas is displayed. -->
+        <div id="content"></div>
+
+        <!-- Colour palette for selecting drawing colors. -->
+        <div class="box colourPalette"></div>
+
+        <!-- Options area for additional controls such as brush size. -->
+        <div class="box options"></div>
+    </div>
+</body>
 </html>
+
