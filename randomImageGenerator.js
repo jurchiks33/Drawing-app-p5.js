@@ -14,17 +14,6 @@ function addRandomImageGenerator() {
     });
 }
 
-// function drawRandomPixels(totalPixels) {
-//     loadPixels();   //preparing canvas for pixel manipulation.
-//     for (let i = 0; i < totalPixels; i++) {
-//         let x = floor(random(width));
-//         let y = floor(random(height));
-//         let col = color(random(255), random(255), random(255));
-//         set(x, y, col);
-//     }
-//     updatePixels();
-// }
-
 function drawRandomPixels(totalPixels) {
     //Choose random starting location to start drawing.
     let x = floor(random(width));
@@ -38,7 +27,7 @@ function drawRandomPixels(totalPixels) {
         //Choose random direction by picking a random angle.
         let angle = random(TWO_PI);
         //Decide how far to move in a given direction.
-        let stepSize = 1 // Adjust to make larger gaps between steps/
+        let stepSize = 2 // Adjust to make larger gaps between steps/
 
         //Move to the next point.
         x += cos(angle) * stepSize;
