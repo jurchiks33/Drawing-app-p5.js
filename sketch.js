@@ -1,27 +1,23 @@
-// Global variable for brush size
-var brushSize;
+// Global variable for drawing app
+var brushSize;                  // Global variable for brush size.
+var toolbox = null;             // Toolbox containing drawing tools.
+var colourP = null;             // Colour pallete for color selection.
+var helpers = null;             // Helper functions for additional features.
+var shapeTool = null;           // Tool for drawing shapes.
+var undoRedoManager = null;     // Undo and redo functionality manager.
+var canvasContainer;            // Container for the canvas.
 
-// Global variables for the toolbox, colour palette, helpers, etc.
-var toolbox = null;
-var colourP = null;
-var helpers = null;
-var shapeTool = null;
-var undoRedoManager = null;
-var canvasContainer;
-
+// Initialization for canvas and application state.
 function setup() {
-    // Select container for the canvas
-    canvasContainer = select('#content');
-    var optionsBox = select('.options');
+    canvasContainer = select('#content');   //Container setup
+    var optionsBox = select('.options');    //Options box containing UI elements
 
-    //Here is coming experimental feature
-
-    let availableWidth = windowWidth - select('#sidebar').width;
-
-    let availableHeight = windowHeight - optionsBox.height - 20;
-
+    //Calculation of the available space for the canvas.
+    let sidebarWidth = select('#sidebar').width;
+    let availableWidth = windowWidth - sidebarWidth;
+    let availableHeight = windowHeight - optionsBox.height - 20;    //Change to adjust options box height
     var c = createCanvas(availableWidth, availableHeight);
-    c.parent("content");
+    c.parent("content");        //Set parent of the canvas for proper positioning.
 
     // Initialize the brush size
     brushSize = 10; // Set a default size
