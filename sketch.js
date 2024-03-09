@@ -85,20 +85,20 @@ function initializeGlobalOptions() {
         brushSizeLabel.html('Brush Size:' + brushSize); // Update the brush size label.
     });
 
-    // Create a label for the brush size slider
+    // Create a label for the brush size slider.
     var brushSizeLabel = createDiv('Brush Size:' + brushSize);
     brushSizeLabel.class('brush-size-label');
-    brushSizeLabel.parent(select('.options')); // Place the label within the options box
+    brushSizeLabel.parent(select('.options'));          // Place the label within the options box.
 }
 
 // Initializes the toolbox, colour palette, helpers, and undo/redo manager
 function initializeToolsAndHelpers() {
-    helpers = new HelperFunctions(); // Initialize helper functions
-    colourP = new ColourPalette(); // Initialize the colour palette
-    toolbox = new Toolbox(); // Initialize the toolbox
-    undoRedoManager = new UndoRedoManager(); // Initialize the undo/redo manager
+    helpers = new HelperFunctions();            // Initialize helper functions.
+    colourP = new ColourPalette();              // Initialize the colour palette.
+    toolbox = new Toolbox();                    // Initialize the toolbox.
+    undoRedoManager = new UndoRedoManager();    // Initialize the undo/redo manager.
 
-    // Add tools to the toolbox
+    // Add tools to the toolbox.
     toolbox.addTool(new FreehandTool());
     toolbox.addTool(new LineToTool());
     toolbox.addTool(new SprayCanTool());
@@ -106,20 +106,20 @@ function initializeToolsAndHelpers() {
     shapeTool = new ShapeTools();
     toolbox.addTool(shapeTool);
 
-    background(255); // Set the background to white
-    var customBrush = new CustomBrush(); // Initialize a custom brush tool
-    toolbox.addTool(customBrush); // Add the custom brush to the toolbox
+    background(255);                        // Set the background to white.
+    var customBrush = new CustomBrush();    // Initialize a custom brush tool.
+    toolbox.addTool(customBrush);           // Add the custom brush to the toolbox.
 }
 
-// Sets up event listeners for UI elements such as buttons and selectors
+// Sets up event listeners for UI elements such as buttons and selectors.
 function setupUIListeners() {
-    // Change shape tool based on user selection
+    // Change shape tool based on selection.
     select('#shapeSelector').changed(() => {
         var selectedShape = select('#shapeSelector').value();
         shapeTool.changeSelectedShape(selectedShape);
     });
 
-    // Event listeners for buttons: undo, redo, etc.
+    // Event listeners for buttons: undo, redo.
     select('#undoButton').mouseClicked(() => undoRedoManager.undo());
     select('#redoButton').mouseClicked(() => undoRedoManager.redo());
 }
