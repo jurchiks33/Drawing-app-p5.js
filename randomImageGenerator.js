@@ -39,5 +39,15 @@ function drawRandomPixels(totalPixels) {
         let angle = random(TWO_PI);
         //Decide how far to move in a given direction.
         let stepSize = 1 // Adjust to make larger gaps between steps/
+
+        //Move to the next point.
+        x += cos(angle) * stepSize;
+        y += sin(angle) * stepSize;
+
+        //If we go outside canvas, wrap around othe rside
+        x = (x + width) % width;
+        y = (y + height) % height;
     }
+
+    updatePixels();
 }
