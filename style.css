@@ -1,104 +1,118 @@
-/*Here comes testing part*/
+/*Theme and UI element colors. */
 :root {
-	--box-bg-color: #444;
-	--header-bg-color: #999;
-
-	--background-color: #fff;
-	--button-color: #ffffff;
-	--slider-color: #ccc;
-	--tool-icon-color: #444;
+	--box-bg-color: #444; 		/* Color for boxes in the UI. */
+	--header-bg-color: #999; 	/* Color for the header background. */
+	--background-color: #fff; 	/* Background color for the body. */
+	--button-color: #ffffff; 	/* Background color for buttons. */
+	--slider-color: #ccc; 		/* Color for sliders. */
+	--tool-icon-color: #444; 	/* Color for tool icons. */
 }
-/*Here ends testing part*/
 
+/* Styling for the body of the document. */
 html, body {
-  margin: 0px;
-  height: 100%;
+	margin: 0px; 	/* Remove default margin. */
+	height: 100%; 	/* Full height. */
 }
 
+/* Sidebar styling. */
 #sidebar {
-	grid-area: sidebar;
-	overflow-y: scroll;
+	grid-area: sidebar; /* Grid area name. */
+	overflow-y: scroll; /* Enable vertical scrolling if content overflows. */
 }
 
+/* Content area styling. */
 #content {
-	grid-area: content;
+	grid-area: content; /* Grid area name. */
 }
 
+/* Header styling. */
 .header {
-	grid-area: header;
-	font-family: Helvetica, sans-serif
+	grid-area: header; 					/* Grid area name. */
+	font-family: Helvetica, sans-serif; /* Font family. */
 }
 
+/* Footer styling. */
 .footer{
-  grid-area: footer;
+	grid-area: footer; /* Grid area name. */
 }
 
+/* Sidebar item styling. */
 .sideBarItem{
-	max-height: 50px;
-	max-width: 50px;
-	padding:5px;
+	max-height: 50px; 	/* Maximum height. */
+	max-width: 50px; 	/* Maximum width. */
+	padding: 5px; 		/* Padding around each item. */
 }
 
+/* Sidebar item image styling. */
 .sideBarItem img{
-	max-height: 50px;
-	max-Width:50px;
+	max-height: 50px; 	/* Maximum image height. */
+	max-width: 50px; 	/* Maximum image width. */
 }
 
+/* Colour palette styling. */
 .colourPalette{
-	grid-area: colourP;
-	display:flex;
-	flex-direction:grid;
-	flex-flow: wrap;
+	grid-area: colourP; 	/* Grid area name. */
+	display: flex; 			/* Use flexbox layout. */
+	flex-direction: grid; 	/* Flex direction.*/
+	flex-flow: wrap; 		/* Allow items to wrap as needed. */
 }
 
+/* Options area styling. */
 .options{
-	grid-area: options;
-	padding: 15px;
+	grid-area: options; /* Grid area name. */
+	padding: 15px; 		/* Padding inside the options area. */
 }
 
+/* Colour swatch styling. */
 .colourSwatches{
-	box-sizing: border-box;
-	width: 40px;
-	height: 40px;
-	max-height: 40px;
-	max-width: 40px;
-	margin: 5px;
+	box-sizing: border-box; /* Include padding and border in element's size. */
+	width: 40px; 			/* Width. */
+	height: 40px; 			/* Height. */
+	max-height: 40px; 		/* Maximum height. */
+	max-width: 40px; 		/* Maximum width. */
+	margin: 5px; 			/* Margin around each swatch. */
 }
 
-
-	.wrapper {
-		display: grid;
-		height: 100%;
-		grid-template-columns: 70px 230px  minmax(500px, 1fr);
-		grid-template-rows: 35px minmax(500px, 1fr) 160px;
-		grid-template-areas:
+/* Grid layout for the wrapper. */
+.wrapper {
+	display: grid; 				/* Use CSS grid layout. */
+	height: 100%; 				/* Full height. */
+	grid-template-columns: 70px 230px minmax(500px, 1fr); 	/* Column sizes. */
+	grid-template-rows: 35px minmax(500px, 1fr) 160px; 		/* Row sizes. */
+	grid-template-areas: 		/* Naming each grid area. */
                "header header header"
-				"sidebar content content"
-                "colourP colourP options";
-		background-color: #fff;
-		color: #444;
-	}
+			   "sidebar content content"
+               "colourP colourP options";
+	background-color: #fff;  /* Background color. */
+	color: #444; 			  /* Text color. */
+}
+
+/* Box styling. */
 .box {
-  background-color: var(--box-bg-color);   /*this one*/
-  color: #fff;
-  font-size: 150%;
+	background-color: var(--box-bg-color); 	 /* Background color from variables. */
+	color: #fff; 							/* Text color. */
+	font-size: 150%; 						 /* Font size. */
 }
 
+/* Header styling. */
 .header {
-  background-color: var(--header-bg-color);
-  font-family: Arial, Helvetica, sans-serif;    /*this one*/
+	background-color: var(--header-bg-color);  /* Background color from variables. */
+	font-family: Arial, Helvetica, sans-serif; /* Font family. */
 }
 
+/* Brush size slider styling. */
 .brush-size-slider {
-	background-color: var(--slider-color);
-    margin-top: 2cm; /* Adjusting margin under horizonatl/vertical button */
+	background-color: var(--slider-color);  /* Background color from variables. */
+	margin-top: 2cm; 						/* Margin at the top. */
 }
 
+/* Button styling. */
 .button {
-	background-color: var(--button-color);
-	color: var(--tool-icon-color);
+	background-color: var(--button-color);  /* Background color from variables. */
+	color: var(--tool-icon-color); 			/* Text/icon color. */
 }
 
+/* Tool icon styling. */
 .tool-icon {
-	color: var(--tool-icon-color);
+	color: var(--tool-icon-color); 			/* Color for tool icons. */
 }

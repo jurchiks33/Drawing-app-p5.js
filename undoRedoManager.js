@@ -10,16 +10,16 @@ function UndoRedoManager() {
 
     //Save current state of canvas/
     this.saveState = function() {
-        this.redoStack = [];        //clears redo stake when new one is saved.
-        this.undoStack.push(getCanvasImage()); //Pushes current canvas image into undo stack.
+        this.redoStack = [];                    //clears redo stake when new one is saved.
+        this.undoStack.push(getCanvasImage());  //Pushes current canvas image into undo stack.
     };
 
     //handles undo action.
     this.undo = function() {
         console.log("Undo called. Stack size before undo:", this.undoStack.length);
         if (this.undoStack.length > 0) {
-            this.redoStack.push(getCanvasImage()); //saves current state before undoing redo stack.
-            var previousState = this.undoStack.pop(); //pops last state from undo stack and loads it into canvas.
+            this.redoStack.push(getCanvasImage());      //saves current state before undoing redo stack.
+            var previousState = this.undoStack.pop();   //pops last state from undo stack and loads it into canvas.
             loadCanvasImage(previousState);
         } else {
             console.log("No more states to undo.");
@@ -50,9 +50,7 @@ function UndoRedoManager() {
     //loads image into a canvas
     function loadCanvasImage(img) {
         console.log("Restoring canvas state");
-        clear();    //Clears canvas.
+        clear();            //Clears canvas.
         image(img, 0, 0);   //draws image in to the canvas.
     }
 }
-
-//test
