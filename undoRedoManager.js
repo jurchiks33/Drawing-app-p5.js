@@ -1,7 +1,5 @@
-//Whith this one i have some problems which i will try to resolve in a second semester.
+
 //Undo/Redo is working with commands Control+z/Control+y.
-//but for some reason buttons are not working. hints are appreciated ;)
-//Tryed to console.log but didnt see something outstanding on a problem.
 
 function UndoRedoManager() {
     //stacks to hold undo/redo states.

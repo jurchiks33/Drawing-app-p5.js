@@ -4,12 +4,12 @@
 
 3--- Also need to adjust starting brush size, it is not as it is on a brush size scroller. (FIXED)
 
-4--- Need to fix BUG when switched to mirror tool, and after switched to other tools, scrollbar is disapearing. maybe overlaping, try to move to the top bar.
+4--- Need to fix BUG when switched to mirror tool, and after switched to other tools, scrollbar is disapearing. maybe overlaping, try to move to the top bar.(fixed)
 
 5--- Themes switch need to be done!(FIXED)
 
 6--- Themes switch is not working. Try to make theme manipulations directly in CSS, instead of themes.js and link it to the theme changing (Partially FIXED, Read below)
-     Update. Themes are working, but need to link rest of tools to them. Experimental changes on boxBackgroundColor and headerBackgroundColor are working
+     Update. Themes are working, but need to link rest of tools to them. Experimental changes on boxBackgroundColor and headerBackgroundColor are working (fixed)
      use them as example to fix rest of the tools. (FIXED)
      Buttons are not changing color with themes. console log shows that apply theme to 0 buttons, which means code cant find class button. need to implement in html. (FIXED)
 
@@ -19,4 +19,4 @@
 
 8---  Work on a random image generator.
       Image generator function, button and input field is set up. When i click the button to generate random image, drawing is not appearing, need to fix it,
-      need to check setInterval and try to debug it.
+      need to check setInterval and try to debug it.(Fixed)

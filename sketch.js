@@ -114,12 +114,18 @@ function initializeToolsAndHelpers() {
 // Sets up event listeners for UI elements such as buttons and selectors.
 function setupUIListeners() {
     // Change shape tool based on selection.
-    select('#shapeSelector').changed(() => {
+    select('#shapeSelector').changed(function() {
         var selectedShape = select('#shapeSelector').value();
         shapeTool.changeSelectedShape(selectedShape);
     });
 
     // Event listeners for buttons: undo, redo.
-    select('#undoButton').mouseClicked(() => undoRedoManager.undo());
-    select('#redoButton').mouseClicked(() => undoRedoManager.redo());
+    select('#undoButton').mouseClicked(function() {
+        console.log("Undo button clicked"); // Console log for debugging
+        undoRedoManager.undo();
+    });
+    select('#redoButton').mouseClicked(function() {
+        console.log("Redo button clicked"); // Console log for debugging
+        undoRedoManager.redo();
+    });
 }
